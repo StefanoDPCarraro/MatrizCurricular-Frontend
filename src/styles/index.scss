@@ -3,16 +3,16 @@
 
 html,
 body,
-#root{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    background-color: $background;
-    margin: 0;
-    color: $black;
-    font-family: 'Inter';
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: $background;
+  margin: 0;
+  color: $black;
+  font-family: 'Inter';
 }
 
-*{
-    font-family: 'Inter';
+* {
+  font-family: 'Inter';
 }

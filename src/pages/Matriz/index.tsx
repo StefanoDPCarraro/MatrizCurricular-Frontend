@@ -1,1 +1,1 @@
-export { default } from './Matriz'
+export { default } from './Matriz';

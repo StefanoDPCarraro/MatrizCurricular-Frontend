@@ -1,11 +1,11 @@
-import React from "react"
+import React from 'react';
 
-const Matriz: React.FC = () =>{
-    return(
-        <>
-            <h1>Teste</h1>
-        </>
-    )
-}
+const Matriz: React.FC = () => {
+  return (
+    <>
+      <h1>Teste</h1>
+    </>
+  );
+};
 
-export default Matriz
+export default Matriz;
