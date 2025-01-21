@@ -1,0 +1,26 @@
+@import '@styles/index';
+
+.component-card-container{
+    display: flex;
+    height: 10vh;
+    width: 10vw;
+    background-color: $background;
+    border: 1px solid $complementary;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    .component-card-required-container{
+        align-self: start;
+        position: relative;
+        .required-label{
+            font-size: small;
+        }
+    }
+    .component-card-requirement-container{
+        align-self: start;
+        position: relative;
+        .requirement-label{
+            font-size: small;
+        }
+    }
+}

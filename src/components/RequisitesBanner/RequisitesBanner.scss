@@ -1,0 +1,16 @@
+@import '@styles/index';
+
+.component-requisite-container{
+    width: 2vw;
+    height: 1vh;
+    .component-requisite-banner{
+        background-color: $primary;
+        height: 100%;
+        width: 100%;
+        align-self: flex-end;
+        font-size: small;
+    }
+}
+
+
+

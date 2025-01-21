@@ -36,6 +36,7 @@
       "@hooks/*": ["hooks/*"],
       "@locales/*": ["locales/*"],
       "@middlewares/*": ["middlewares/*"],
+      "@mocks/*": ["mocks/*"],
       "@pages/*": ["pages/*"],
       "@providers/*": ["providers/*"],
       "@router/*": ["router/*"],

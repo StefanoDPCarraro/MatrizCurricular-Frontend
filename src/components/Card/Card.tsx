@@ -1,19 +1,31 @@
-import { ReactNode } from 'react';
+import { Subject } from '@dtos/SubjectDTO';
 import './Card.scss';
+import RequisitesBanner from '@components/RequisitesBanner';
 
 export interface CardProps {
-  children?: ReactNode;
+  children?: String;
   onClick?: VoidFunction;
-  disabled?: boolean;
+  requirement: Subject[];
+  required: Subject[];
 }
 
-const Card: React.FC<CardProps> = ({ children, onClick, disabled = false }) => {
+const Card: React.FC<CardProps> = ({ children, onClick, requirement, required}) => {
   return (
     <>
-      <div>
-        <button onClick={onClick} disabled={disabled}>
+      <div className='component-card-container'>
+        <div className='component-card-required-container'>
+          <RequisitesBanner subjects={required}>
+            <p className='required-label'>REQ</p>
+          </RequisitesBanner>
+        </div>
+        <div onClick={onClick} >
           {children}
-        </button>
+        </div>
+        <div className='component-card-requirement-container'>
+          <RequisitesBanner subjects={requirement}>
+            <p className='requirement-label'>PRE</p>
+          </RequisitesBanner>
+        </div>
       </div>
     </>
   );
