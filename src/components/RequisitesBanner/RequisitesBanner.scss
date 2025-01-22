@@ -9,7 +9,7 @@
 .component-requisite-container {
   .component-requisite-banner {
     display: flex;
-    border-radius: 0.5vh;
+    border-radius: 0.3vh;
     background-color: $primary;
     height: 100%;
     width: 100%;
@@ -17,7 +17,7 @@
     justify-content: center;
     .requisite-text {
       color: $white;
-      font-size: 100%;
+      font-size: 1.5vh;
       font-weight: bold;
       padding: 1px;
     }
@@ -26,14 +26,16 @@
 
 .component-requirement-container {
   .component-requirement-banner {
-    border-radius: 0.5vh;
+    display: flex;
+    border-radius: 0.3vh;
     background-color: $secondary;
     height: 100%;
     width: 100%;
     align-self: flex-end;
+    justify-content: center;
     .requirement-text {
       color: $primary;
-      font-size: 100%;
+      font-size: 1.5vh;
       font-weight: bold;
       padding: 1px;
     }
