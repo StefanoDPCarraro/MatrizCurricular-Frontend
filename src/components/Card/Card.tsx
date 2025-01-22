@@ -1,6 +1,6 @@
-import { Subject } from '@dtos/SubjectDTO';
-import './Card.scss';
-import RequisitesBanner from '@components/RequisitesBanner';
+import { Subject } from "@dtos/SubjectDTO";
+import "./Card.scss";
+import RequisitesBanner from "@components/RequisitesBanner";
 
 export interface CardProps {
   children?: String;
@@ -9,21 +9,31 @@ export interface CardProps {
   required: Subject[];
 }
 
-const Card: React.FC<CardProps> = ({ children, onClick, requirement, required}) => {
+const Card: React.FC<CardProps> = ({
+  children,
+  onClick,
+  requirement,
+  required
+}) => {
   return (
     <>
-      <div className='component-card-container'>
-        <div className='component-card-required-container'>
-          <RequisitesBanner subjects={required}>
-            <p className='required-label'>REQ</p>
+      <div className="component-card-container">
+        <div className="component-card-required-container">
+          <RequisitesBanner subjects={required} variant="required">
+            REQ
           </RequisitesBanner>
         </div>
-        <div onClick={onClick} >
-          {children}
+        <div className="component-card-subject-credit-container">
+          <div className="component-card-subject-container">
+            <p className="subject-text"> {children}</p>
+          </div>
+          <div className="component-card-credit-container">
+            <p className="credit-text"> 98712-04</p>
+          </div>
         </div>
-        <div className='component-card-requirement-container'>
-          <RequisitesBanner subjects={requirement}>
-            <p className='requirement-label'>PRE</p>
+        <div className="component-card-requirement-container">
+          <RequisitesBanner subjects={requirement} variant="requirement">
+            PRE
           </RequisitesBanner>
         </div>
       </div>

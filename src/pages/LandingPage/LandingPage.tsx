@@ -1,20 +1,22 @@
-import Card from '@components/Card';
-import { requirements } from '@mocks/Requirements';
-import React from 'react';
+import Card from "@components/Card";
+import { requirements } from "@mocks/Requirements";
+import React from "react";
 
 const LandingPage: React.FC = () => {
   return (
     <>
-      <h1>Landing Page</h1>
-      <Card required={requirements}
-      requirement={requirements}
+      <h1>Cursinho dos computer</h1>
+      <br></br>
+      <Card
+        required={requirements}
+        requirement={requirements}
         onClick={() => {
-          console.log('clicked');
+          console.log("clicked");
         }}
       >
-        Button
+        Fundamentos de sistemas digitais
       </Card>
     </>
   );
-};      
+};
 export default LandingPage;

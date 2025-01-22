@@ -1,4 +1,4 @@
-export interface Subject{
-    creditCode: string
-    name: string
+export interface Subject {
+  creditCode: string;
+  name: string;
 }

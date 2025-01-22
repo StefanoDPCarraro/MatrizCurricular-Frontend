@@ -1,16 +1,41 @@
-@import '@styles/index';
+@import "@styles/index";
 
-.component-requisite-container{
-    width: 2vw;
-    height: 1vh;
-    .component-requisite-banner{
-        background-color: $primary;
-        height: 100%;
-        width: 100%;
-        align-self: flex-end;
-        font-size: small;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+.component-requisite-container {
+  .component-requisite-banner {
+    display: flex;
+    border-radius: 0.5vh;
+    background-color: $primary;
+    height: 100%;
+    width: 100%;
+    align-self: flex-end;
+    justify-content: center;
+    .requisite-text {
+      color: $white;
+      font-size: 100%;
+      font-weight: bold;
+      padding: 1px;
+    }
+  }
+}
 
-
+.component-requirement-container {
+  .component-requirement-banner {
+    border-radius: 0.5vh;
+    background-color: $secondary;
+    height: 100%;
+    width: 100%;
+    align-self: flex-end;
+    .requirement-text {
+      color: $primary;
+      font-size: 100%;
+      font-weight: bold;
+      padding: 1px;
+    }
+  }
+}

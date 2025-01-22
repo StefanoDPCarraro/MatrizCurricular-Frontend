@@ -1,26 +1,60 @@
-@import '@styles/index';
+@import "@styles/index";
 
-.component-card-container{
+.component-card-container {
+  display: flex;
+  flex-direction: row;
+  height: 10vh;
+  width: 10vw;
+  background-color: $background;
+  border: 1px solid $complementary;
+  border-radius: 1vh;
+  align-items: center;
+  justify-content: center;
+  .component-card-required-container {
     display: flex;
-    height: 10vh;
-    width: 10vw;
-    background-color: $background;
-    border: 1px solid $complementary;
-    border-radius: 10px;
+    width: 1.5vw;
+    height: 2vh;
+    position: relative;
+    align-self: flex-start;
+  }
+  .component-card-subject-credit-container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
     align-items: center;
     justify-content: center;
-    .component-card-required-container{
-        align-self: start;
-        position: relative;
-        .required-label{
-            font-size: small;
-        }
+    height: 100%;
+    width: 7vw;
+    .component-card-subject-container {
+      display: flex;
+      height: 90%;
+      justify-content: center;
+      align-items: center;
+      justify-items: center;
+      text-align: center;
+      .subject-text {
+        overflow: hidden;
+        display: inline-block;
+        font-size: 2vh;
+        align-items: center;
+      }
     }
-    .component-card-requirement-container{
-        align-self: start;
-        position: relative;
-        .requirement-label{
-            font-size: small;
-        }
+    .component-card-credit-container {
+      display: flex;
+      height: 100%;
+      .credit-text {
+        overflow: hidden;
+        display: inline-block;
+        font-size: 2vh;
+        align-items: center;
+      }
     }
+  }
+  .component-card-requirement-container {
+    display: flex;
+    width: 1.5vw;
+    height: 2vh;
+    position: relative;
+    align-self: flex-start;
+  }
 }

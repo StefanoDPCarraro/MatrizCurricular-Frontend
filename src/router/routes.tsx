@@ -1,9 +1,9 @@
-import { RouteProps } from 'react-router-dom';
-import PAGES from '@utils/constants/pages';
-import Matriz from '@pages/Matriz';
-import LandingPage from '@pages/LandingPage';
+import { RouteProps } from "react-router-dom";
+import PAGES from "@utils/constants/pages";
+import Matriz from "@pages/Matriz";
+import LandingPage from "@pages/LandingPage";
 
-export interface RouteConfig extends Omit<RouteProps, 'component'> {
+export interface RouteConfig extends Omit<RouteProps, "component"> {
   component: JSX.Element;
 }
 

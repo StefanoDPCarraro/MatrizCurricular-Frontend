@@ -1,24 +1,36 @@
 import { Subject } from "@dtos/SubjectDTO";
-import { ReactElement } from "react";
+import "./RequisitesBanner.scss";
 
-export interface RequisitesBannerProps{
-    subjects: Subject[];
-    children?: ReactElement;
+export interface RequisitesBannerProps {
+  subjects: Subject[];
+  children?: string;
+  variant: "required" | "requirement";
 }
 
-const RequisitesBanner: React.FC<RequisitesBannerProps> = ({subjects, children}) =>{
-    if(subjects.length === 0){
-        return(
-            <div className="component-requisite-container"></div>
-        )
-    }
-    return(
-        <div className="component-requisite-container">
-            <div className="component-requisite-banner">
-                {children}
-            </div>
+const RequisitesBanner: React.FC<RequisitesBannerProps> = ({
+  subjects,
+  children,
+  variant
+}) => {
+  if (subjects.length === 0) {
+    return <div className="component-requisite-container"></div>;
+  } else if (variant === "required") {
+    return (
+      <div className="component-requisite-container">
+        <div className="component-requisite-banner">
+          <p className="requisite-text">{children}</p>
         </div>
-    )
-}
+      </div>
+    );
+  } else {
+    return (
+      <div className="component-requirement-container">
+        <div className="component-requirement-banner">
+          <p className="requirement-text">{children}</p>
+        </div>
+      </div>
+    );
+  }
+};
 
 export default RequisitesBanner;
