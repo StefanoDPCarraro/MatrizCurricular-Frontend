@@ -7,7 +7,7 @@ const Matriz: React.FC = () => {
   return (
     <>
       <Header course="Engenharia de Software - 98AL"></Header>
-      
+
       <br></br>
       <Card
         required={requirements}
