@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.scss";
-import Logo from "@components/PucrsLogo";
+import Logo from "@components/Logo";
 
 export interface HeaderProps {
   course?: string;
