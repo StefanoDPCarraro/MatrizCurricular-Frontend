@@ -1,0 +1,42 @@
+@import "@styles/index";
+
+.header-container {
+  display: flex;
+  flex-direction: column; 
+  height: 100%; 
+  max-height: 15vh; 
+  width: 100%; 
+  background-color: $background;
+  align-items: center; 
+  justify-content: flex-start; 
+
+  .up-bar {
+    background-color: $primary;
+    height: 3vh; 
+    width: 100%; 
+    flex-shrink: 0; 
+  }
+
+  .pucrs-logo-container {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
+    height: 8vh; 
+    width: 60%; 
+    margin-top: -1vh; 
+
+    img {
+      width: 7vw; 
+      max-width: 100%; 
+      height: auto; 
+    }
+  }
+  .infos {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
+    height: 7vh; 
+    width: 59%; 
+    margin-top: -1vh; 
+  }
+}

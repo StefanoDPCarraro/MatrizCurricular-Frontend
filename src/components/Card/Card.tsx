@@ -7,13 +7,15 @@ export interface CardProps {
   onClick?: VoidFunction;
   requirement: Subject[];
   required: Subject[];
+  creditCode: String;
 }
 
 const Card: React.FC<CardProps> = ({
   children,
   onClick,
   requirement,
-  required
+  required,
+  creditCode
 }) => {
   return (
     <>
@@ -28,7 +30,7 @@ const Card: React.FC<CardProps> = ({
             <p className="subject-text"> {children}</p>
           </div>
           <div className="component-card-credit-container">
-            <p className="credit-text"> 98712-04</p>
+            <p className="credit-text"> {creditCode}</p>
           </div>
         </div>
         <div className="component-card-requirement-container">
