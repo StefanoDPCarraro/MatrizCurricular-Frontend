@@ -13,8 +13,6 @@
   max-height: 12vh;
   width: 100%;
   background-color: $background;
-  align-items: left;
-  justify-content: flex-start;
 
   .up-bar {
     background-color: $primary;
@@ -25,10 +23,6 @@
 
   .pucrs-logo-container {
     display: flex;
-    align-items: center;
-    justify-content: left;
-    height: 8vh;
-    width: 80%;
     margin-top: 1.5vh;
     margin-left: 21%;
 
@@ -40,31 +34,23 @@
   }
 
   .infos-container {
+    display: flex; 
+    flex-direction: row; 
+    gap: 0.4vh; 
     margin-top: 2vh;
-    display: flex; /* Ativa o layout flexível */
-    flex-direction: row; /* Configura os elementos filhos para ficarem lado a lado */
-    align-items: center;
-    height: 8vh;
-    width: 100%;
-    gap: 0.4vh; /* Adiciona um espaçamento fixo de 1vh entre os itens */
     background-color: $light-gray;
 
     .infos-layout {
-      display: flex; /* Ativa o layout flexível */
-      flex-direction: row; /* Configura os elementos filhos para ficarem lado a lado */
-      align-items: center;
-      height: 5.2vh;
-      width: 100%;
-      gap: 0.4vh; /* Adiciona um espaçamento fixo de 1vh entre os itens */
-      justify-content: left;
+      display: flex;
+      align-items: center; 
+      height: 5.2vh; 
+      width: 100%; 
+      gap: 0.4vh;
       margin-left: 21%;
 
       .house {
         display: flex;
         align-items: center;
-        justify-content: flex-start;
-        height: 8vh;
-        width: auto; /* Ajusta a largura automaticamente com base no conteúdo */
 
         img {
           width: 2vw;
@@ -76,9 +62,7 @@
       .arrow {
         display: flex;
         align-items: center;
-        justify-content: flex-start;
-        height: 8vh;
-        width: auto; /* Ajusta a largura automaticamente com base no conteúdo */
+        width: auto; 
 
         img {
           width: 1vw;
@@ -90,9 +74,7 @@
       .text {
         display: flex;
         align-items: center;
-        justify-content: flex-start;
-        height: 10vh;
-        width: auto; /* Ajusta a largura automaticamente com base no conteúdo */
+        width: auto; 
 
         p {
           font-size: 1.5vh;
