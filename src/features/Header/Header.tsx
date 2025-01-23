@@ -24,12 +24,16 @@ const Header: React.FC<HeaderProps> = ({ course }) => {
           <div className="text">
             <p>Matrizes Curriculares</p>
           </div>
-          <div className="arrow">
-            <Logo src="src\assets\Arrow.PNG" alt="Arrow" />
-          </div>
-          <div className="text">
-            <p>{course}</p>
-          </div>
+          {course && (
+            <>
+              <div className="arrow">
+                <Logo src="src/assets/Arrow.PNG" alt="Arrow" />
+              </div>
+              <div className="text">
+                <p>{course}</p>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </>
