@@ -8,6 +8,7 @@ const Matriz: React.FC = () => {
     <>
       <Header course="Engenharia de Software - 98AL"></Header>
       <br></br>
+      <br></br>
       <Card
         required={requirements}
         requirement={requirements}
@@ -16,7 +17,7 @@ const Matriz: React.FC = () => {
         }}
         creditCode={"1229381-02"}
       >
-        Fundamentos de sistemas digitais
+        Sistemas de Planejamento e Custo para Engenharia
       </Card>
       <br></br>
       <Card

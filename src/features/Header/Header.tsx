@@ -15,25 +15,27 @@ const Header: React.FC<HeaderProps> = ({ course }) => {
           <Logo src="src\assets\PUCRS.png" alt="PUCRS Logo" />
         </div>
         <div className="infos-container">
-          <div className="house">
-            <Logo src="src\assets\House.png" alt="House" />
+          <div className="infos-layout">
+            <div className="house">
+              <Logo src="src\assets\House.png" alt="House" />
+            </div>
+            <div className="arrow">
+              <Logo src="src\assets\Arrow.PNG" alt="Arrow" />
+            </div>
+            <div className="text">
+              <p>Matrizes Curriculares</p>
+            </div>
+            {course && (
+              <>
+                <div className="arrow">
+                  <Logo src="src/assets/Arrow.PNG" alt="Arrow" />
+                </div>
+                <div className="text">
+                  <p>{course}</p>
+                </div>
+              </>
+            )}
           </div>
-          <div className="arrow">
-            <Logo src="src\assets\Arrow.PNG" alt="Arrow" />
-          </div>
-          <div className="text">
-            <p>Matrizes Curriculares</p>
-          </div>
-          {course && (
-            <>
-              <div className="arrow">
-                <Logo src="src/assets/Arrow.PNG" alt="Arrow" />
-              </div>
-              <div className="text">
-                <p>{course}</p>
-              </div>
-            </>
-          )}
         </div>
       </div>
     </>

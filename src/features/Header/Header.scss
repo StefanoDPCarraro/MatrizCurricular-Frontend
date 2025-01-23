@@ -1,13 +1,19 @@
 @import "@styles/index";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .header-container {
   display: flex;
   flex-direction: column;
   height: 100%;
-  max-height: 15vh;
+  max-height: 12vh;
   width: 100%;
   background-color: $background;
-  align-items: center;
+  align-items: left;
   justify-content: flex-start;
 
   .up-bar {
@@ -20,66 +26,77 @@
   .pucrs-logo-container {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: left;
     height: 8vh;
-    width: 60%;
-    margin-top: 1vh;
+    width: 80%;
+    margin-top: 1.5vh;
+    margin-left: 21%;
 
     img {
-      width: 7vw;
+      width: 7.2vw;
       max-width: 100%;
       height: auto;
     }
   }
 
   .infos-container {
+    margin-top: 2vh;
     display: flex; /* Ativa o layout flexível */
     flex-direction: row; /* Configura os elementos filhos para ficarem lado a lado */
     align-items: center;
-    height: 6vh;
-    width: 60%;
+    height: 8vh;
+    width: 100%;
     gap: 0.4vh; /* Adiciona um espaçamento fixo de 1vh entre os itens */
+    background-color: $light-gray;
 
-    .house {
-      display: flex;
+    .infos-layout {
+      display: flex; /* Ativa o layout flexível */
+      flex-direction: row; /* Configura os elementos filhos para ficarem lado a lado */
       align-items: center;
-      justify-content: flex-start;
-      height: 8vh;
-      width: auto; /* Ajusta a largura automaticamente com base no conteúdo */
-      margin-top: 1vh;
+      height: 5.2vh;
+      width: 100%;
+      gap: 0.4vh; /* Adiciona um espaçamento fixo de 1vh entre os itens */
+      justify-content: left;
+      margin-left: 21%;
 
-      img {
-        width: 2.5vw;
-        max-width: 100%;
-        height: auto;
+      .house {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 8vh;
+        width: auto; /* Ajusta a largura automaticamente com base no conteúdo */
+
+        img {
+          width: 2vw;
+          max-width: 100%;
+          height: auto;
+        }
       }
-    }
 
-    .arrow {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      height: 8vh;
-      width: auto; /* Ajusta a largura automaticamente com base no conteúdo */
-      margin-top: 1vh;
+      .arrow {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 8vh;
+        width: auto; /* Ajusta a largura automaticamente com base no conteúdo */
 
-      img {
-        width: 1.5vw;
-        max-width: 100%;
-        height: auto;
+        img {
+          width: 1vw;
+          max-width: 100%;
+          height: auto;
+        }
       }
-    }
 
-    .text {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      height: 10vh;
-      width: auto; /* Ajusta a largura automaticamente com base no conteúdo */
-      margin-top: 1vh;
+      .text {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 10vh;
+        width: auto; /* Ajusta a largura automaticamente com base no conteúdo */
 
-      p {
-        font-size: 2vh;
+        p {
+          font-size: 1.5vh;
+        }
       }
     }
   }
