@@ -2,41 +2,85 @@
 
 .header-container {
   display: flex;
-  flex-direction: column; 
-  height: 100%; 
-  max-height: 15vh; 
-  width: 100%; 
+  flex-direction: column;
+  height: 100%;
+  max-height: 15vh;
+  width: 100%;
   background-color: $background;
-  align-items: center; 
-  justify-content: flex-start; 
+  align-items: center;
+  justify-content: flex-start;
 
   .up-bar {
     background-color: $primary;
-    height: 3vh; 
-    width: 100%; 
-    flex-shrink: 0; 
+    height: 3vh;
+    width: 100%;
+    flex-shrink: 0;
   }
 
   .pucrs-logo-container {
     display: flex;
-    align-items: center; 
-    justify-content: flex-start; 
-    height: 8vh; 
-    width: 60%; 
-    margin-top: -1vh; 
+    align-items: center;
+    justify-content: flex-start;
+    height: 8vh;
+    width: 60%;
+    margin-top: 1vh;
 
     img {
-      width: 7vw; 
-      max-width: 100%; 
-      height: auto; 
+      width: 7vw;
+      max-width: 100%;
+      height: auto;
     }
   }
-  .infos {
-    display: flex;
-    align-items: center; 
-    justify-content: flex-start; 
-    height: 7vh; 
-    width: 59%; 
-    margin-top: -1vh; 
+
+  .infos-container {
+    display: flex; /* Ativa o layout flexível */
+    flex-direction: row; /* Configura os elementos filhos para ficarem lado a lado */
+    align-items: center;
+    height: 6vh;
+    width: 60%;
+    gap: 0.4vh; /* Adiciona um espaçamento fixo de 1vh entre os itens */
+
+    .house {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      height: 8vh;
+      width: auto; /* Ajusta a largura automaticamente com base no conteúdo */
+      margin-top: 1vh;
+
+      img {
+        width: 2.5vw;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .arrow {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      height: 8vh;
+      width: auto; /* Ajusta a largura automaticamente com base no conteúdo */
+      margin-top: 1vh;
+
+      img {
+        width: 1.5vw;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .text {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      height: 10vh;
+      width: auto; /* Ajusta a largura automaticamente com base no conteúdo */
+      margin-top: 1vh;
+
+      p {
+        font-size: 2vh;
+      }
+    }
   }
 }

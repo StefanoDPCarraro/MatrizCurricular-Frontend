@@ -1,1 +1,1 @@
-export { default } from "./PucrsLogo";
+export { default } from "./Logo";

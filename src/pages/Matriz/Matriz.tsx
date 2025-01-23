@@ -6,7 +6,7 @@ import Header from "@features/Header/Header";
 const Matriz: React.FC = () => {
   return (
     <>
-      <Header></Header>
+      <Header course="Engenharia de Software - 98AL"></Header>
       <br></br>
       <Card
         required={requirements}
