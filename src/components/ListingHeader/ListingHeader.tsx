@@ -4,7 +4,7 @@ import "./ListingHeader.scss";
 const ListingHeader: React.FC = () => {
   return (
     <>
-      <div className="header-container">
+      <div className="header-listing-container">
         <div className="header-title">
           <h1>GRADUAÇÃO</h1>
         </div>

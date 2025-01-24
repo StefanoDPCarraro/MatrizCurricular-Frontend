@@ -1,13 +1,13 @@
 import React from "react";
 import "./ListingCourseCard.scss";
 
-export interface ListingCourse{
+export interface ListingCourseCard{
     courseName: String;
     creditCode: String;
     semester: number;
   }
 
-  const ListingCourseCard: React.FC<ListingCourse> = ({
+  const ListingCourseCard: React.FC<ListingCourseCard> = ({
     courseName,
     semester,
     creditCode
