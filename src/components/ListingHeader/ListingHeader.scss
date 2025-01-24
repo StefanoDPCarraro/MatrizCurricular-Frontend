@@ -12,6 +12,7 @@
   height: 100%;
   width: 100%;
   background-color: $background;
+  max-height: 22vh;
 
   .header-title {
     display: flex;
@@ -33,22 +34,36 @@
     .header-course-name {
       font-weight: bolder;
       font-size: 1.5vh;
-      position: absolute;
-      left: 46vh;
+      margin-left: 18%;
+      margin-top: 7.5%;
     }
 
-    .header-duration {
-      font-weight: bolder;
-      font-size: 1.5vh;
-      position: absolute;
-      left: 115vh;
-    }
+    .header-layout {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      margin-top: 1%;
 
-    .header-curriculum {
-      font-weight: bolder;
-      font-size: 1.5vh;
-      position: absolute;
-      left: 135vh;
+      .header-course-name {
+        font-weight: bolder;
+        font-size: 1.5vh;
+        position: absolute;
+        left: 19.4%;
+      }
+
+      .header-duration {
+        font-weight: bolder;
+        font-size: 1.5vh;
+        position: absolute;
+        left: 55%;
+      }
+
+      .header-curriculum {
+        font-weight: bolder;
+        font-size: 1.5vh;
+        position: absolute;
+        left: 67%; // Define a distância de 55% da parede esquerda
+      }
     }
   }
 }

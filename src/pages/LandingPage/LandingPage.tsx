@@ -7,7 +7,7 @@ const LandingPage: React.FC = () => {
     <>
       <Header />
       <ListingCourse></ListingCourse>
-      </>
+    </>
   );
 };
 export default LandingPage;
