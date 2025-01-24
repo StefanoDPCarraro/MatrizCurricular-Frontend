@@ -10,12 +10,18 @@ const ListingCourse: React.FC = () => {
       <ListingHeader></ListingHeader>
 
       {coursesTest.map((courses) => (
-            <ListingCourseCard
-            courseName={courses.name}
-            semester={courses.semester}
-            creditCode={courses.codicred}
-            />
-        ))}
+        <ListingCourseCard
+          courseName={courses.name}
+          semester={courses.semester}
+          creditCode={courses.codicred}
+        />
+      ))}
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
     </>
   );
 };

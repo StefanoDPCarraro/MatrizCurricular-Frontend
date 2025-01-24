@@ -122,4 +122,3 @@ export const coursesTest: Course[] = [
     codicred: "RST121"
   }
 ];
-
