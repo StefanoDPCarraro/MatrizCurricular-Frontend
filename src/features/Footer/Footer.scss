@@ -1,0 +1,46 @@
+@import "@styles/index";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  display: flex;
+  height: 100%;
+  max-height: 19vh;
+  width: 100%;
+  background-color: $background;
+  margin-top: 16vh;
+
+  .footer-bar {
+    background-color: $primary;
+    height: 12vh;
+    width: 100%;
+    flex-shrink: 0;
+    position: absolute;
+  }
+
+  .footer-components {
+    display: flex;
+    flex-direction: row;
+    
+
+    .footer-logos {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-left: 25vh;
+      margin-top: 28vh;
+    }
+
+    .footer-qr-code {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      margin-left: 150vh;
+      margin-top: 16vh;
+    }
+  }
+}
