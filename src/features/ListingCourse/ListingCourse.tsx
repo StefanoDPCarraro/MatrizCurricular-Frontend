@@ -2,16 +2,20 @@ import React from "react";
 import "./ListingCourse.scss";
 import ListingHeader from "@components/ListingHeader";
 import ListingCourseCard from "@components/ListingCourseCard";
+import { coursesTest } from "@mocks/Courses";
 
 const ListingCourse: React.FC = () => {
   return (
     <>
       <ListingHeader></ListingHeader>
-      <ListingCourseCard
-        courseName={"Administração: Administração de Empresas"}
-        semester={8}
-        creditCode={"255G"}
-      ></ListingCourseCard>
+
+      {coursesTest.map((courses) => (
+            <ListingCourseCard
+            courseName={courses.name}
+            semester={courses.semester}
+            creditCode={courses.codicred}
+            />
+        ))}
     </>
   );
 };

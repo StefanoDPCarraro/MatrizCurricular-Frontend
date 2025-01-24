@@ -28,12 +28,12 @@
   .semester-duration {
     position: absolute;
     left: 55%;
-    color: $primary;
+    color: $landing-page-text;
   }
 
   .credit-text {
-    position: absolute; // Faz com que o elemento seja posicionado de forma absoluta
-    left: 70%; // Define a distância de 55% da parede esquerda
-    color: $primary;
+    position: absolute; 
+    left: 70%;
+    color: $landing-page-text;
   }
 }

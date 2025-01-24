@@ -1,69 +1,54 @@
 @import "@styles/index";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
 }
 
 .header-listing-container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  background-color: $background;
-  max-height: 22vh;
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   width: 100%;
+   background-color: $background;
+   max-height: 22vh;
 
-  .header-title {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 3vh;
-    font-size: 1.5vh;
-    margin-left: 21%;
-    margin-top: 7.5%;
-  }
-
-  .header-layout {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    margin-left: 22%;
-    margin-top: 1%;
-
-    .header-course-name {
-      font-weight: bolder;
+   .header-title {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 3vh;
       font-size: 1.5vh;
       margin-left: 18%;
       margin-top: 7.5%;
-    }
+   }
 
-    .header-layout {
+   .header-layout {
       display: flex;
-      flex-direction: row;
+      flex-direction: row; 
       align-items: flex-start;
       margin-top: 1%;
 
       .header-course-name {
-        font-weight: bolder;
-        font-size: 1.5vh;
-        position: absolute;
-        left: 19.4%;
+         font-weight: bolder;
+         font-size: 1.5vh;
+         position: absolute;
+         left: 19.4%;
       }
 
       .header-duration {
-        font-weight: bolder;
-        font-size: 1.5vh;
-        position: absolute;
-        left: 55%;
+         font-weight: bolder;
+         font-size: 1.5vh;
+         position: absolute;
+         left: 55%;
       }
 
       .header-curriculum {
-        font-weight: bolder;
-        font-size: 1.5vh;
-        position: absolute;
-        left: 67%; // Define a distância de 55% da parede esquerda
+         font-weight: bolder;
+         font-size: 1.5vh;
+         position: absolute;
+         left: 67%; 
       }
-    }
-  }
+   }
 }
