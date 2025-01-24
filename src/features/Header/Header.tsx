@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ course }) => {
               <Logo src="src\assets\House.png" alt="House" linkTo="/" />
             </div>
             <div className="arrow">
-              <Logo src="src\assets\Arrow.PNG" alt="Arrow" />
+              <Logo src="src\assets\Arrow.png" alt="Arrow" />
             </div>
             <div className="text">
               <p>Matrizes Curriculares</p>
@@ -33,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({ course }) => {
             {course && (
               <>
                 <div className="arrow">
-                  <Logo src="src/assets/Arrow.PNG" alt="Arrow" />
+                  <Logo src="src/assets/Arrow.png" alt="Arrow" />
                 </div>
                 <div className="text">
                   <p>{course}</p>

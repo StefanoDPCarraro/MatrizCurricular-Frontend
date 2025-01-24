@@ -1,0 +1,41 @@
+@import "@styles/index";
+
+
+.divisor {
+    background-color: $light-gray;
+    height: 1px;
+    width: 64%;
+    margin-top: 1%;
+    margin-left: auto;  
+    margin-right: auto;  
+}   
+  
+
+.component-listing-card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.4vh;
+    margin-top: 1.5vh;
+    padding-left: 19.35%;
+
+    .course-name {
+        display: flex;
+        align-items: center;
+        width: auto;
+        font-size: 19px;
+        font-weight: bolder;
+        color: $primary;
+    }
+
+    .semester-duration {
+        position: absolute; 
+        left: 55%;  
+        color: $primary;
+    }
+
+    .credit-text {
+        position: absolute;  // Faz com que o elemento seja posicionado de forma absoluta
+        left: 70%;  // Define a distância de 55% da parede esquerda
+        color: $primary;
+    }
+}
