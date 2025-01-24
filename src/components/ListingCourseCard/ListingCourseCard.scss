@@ -2,7 +2,7 @@
 
 .divisor {
   background-color: $light-gray;
-  height: 1px;
+  height: 1vh;
   width: 64%;
   margin-top: 1%;
   margin-left: auto;
@@ -22,7 +22,7 @@
     width: auto;
     font-size: 19px;
     font-weight: bolder;
-    color: $primary;
+    color: $course-name;
   }
 
   .semester-duration {
