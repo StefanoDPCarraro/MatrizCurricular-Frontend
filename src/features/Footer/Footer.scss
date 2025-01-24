@@ -9,9 +9,9 @@
 .footer-container {
   display: flex;
   height: 100%;
-  max-height: 19vh;
+  max-height: 12vh;
   width: 100%;
-  background-color: $background;
+  background-color: red;
   margin-top: 16vh;
 
   .footer-bar {
@@ -25,6 +25,7 @@
   .footer-components {
     display: flex;
     flex-direction: row;
+  
     
 
     .footer-logos {
@@ -33,6 +34,12 @@
       justify-content: flex-start;
       margin-left: 25vh;
       margin-top: 28vh;
+    }
+
+    .footer-info {
+      margin-top: 100vh;
+      height: 10vh;
+      margin-bottom: -20vh;
     }
 
     .footer-qr-code {

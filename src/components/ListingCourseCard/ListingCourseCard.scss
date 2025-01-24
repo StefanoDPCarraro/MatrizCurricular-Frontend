@@ -5,7 +5,7 @@
     background-color: $complementary-gray;
     height: 1px;
     width: 64%;
-    margin-top: 1vh;
+    margin-top: 1.5vh;
     margin-left: auto;
     margin-right: auto;
   }
@@ -29,13 +29,13 @@
     .semester-duration {
       position: absolute;
       left: 55%;
-      color: $landing-page-text;
+      color: $complementary;
     }
 
     .credit-text {
       position: absolute;
       left: 70%;
-      color: $landing-page-text;
+      color: $complementary;
     }
   }
 }
