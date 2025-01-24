@@ -1,24 +1,13 @@
-import ListingHeader from "@components/ListingHeader";
-import ListingCourseCard from "@components/ListingCourseCard";
 import Header from "@features/Header/Header";
 import React from "react";
+import ListingCourse from "@features/ListingCourse";
 
 const LandingPage: React.FC = () => {
   return (
     <>
       <Header />
-      <ListingHeader></ListingHeader>
-      <ListingCourseCard 
-        courseName={"Administração: Administração de Empresas"}
-        semester={8}
-        creditCode={"255G"}
-        >
-        
-        </ListingCourseCard>
-
-        
-    </>
-    //LISTINGCOURSE
+      <ListingCourse></ListingCourse>
+      </>
   );
 };
 export default LandingPage;
