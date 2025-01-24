@@ -1,0 +1,54 @@
+@import "@styles/index";
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.header-container {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   width: 100%;
+   background-color: $background;
+
+   .header-title {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 3vh;
+      font-size: 1.5vh;
+      margin-left: 21%;
+      margin-top: 7.5%;
+   }
+
+   .header-layout {
+      display: flex;
+      flex-direction: row; 
+      align-items: flex-start;
+      margin-left: 22%;
+      margin-top: 1%;
+
+      .header-course-name {
+         font-weight: bolder;
+         font-size: 1.5vh;
+         position: absolute;
+         left: 46vh;
+      }
+
+      .header-duration {
+         font-weight: bolder;
+         font-size: 1.5vh;
+         position: absolute;
+         left: 115vh;
+      }
+
+      .header-curriculum {
+         font-weight: bolder;
+         font-size: 1.5vh;
+         position: absolute;
+         left: 135vh;
+      }
+   }
+}
