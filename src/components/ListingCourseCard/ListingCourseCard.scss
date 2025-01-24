@@ -1,39 +1,42 @@
 @import "@styles/index";
 
-.divisor {
-  background-color: $light-gray;
-  height: 1vh;
-  width: 64%;
-  margin-top: 1%;
-  margin-left: auto;
-  margin-right: auto;
-}
+.component-course-container {
 
-.component-listing-card-container {
-  display: flex;
-  flex-direction: row;
-  gap: 0.4vh;
-  margin-top: 1.5vh;
-  padding-left: 19.35%;
+  .divisor {
+    background-color: $light-gray;
+    height: 1px;
+    width: 64%;
+    margin-top: 1vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-  .course-name {
+  .component-listing-card-container {
     display: flex;
-    align-items: center;
-    width: auto;
-    font-size: 19px;
-    font-weight: bolder;
-    color: $course-name;
-  }
+    flex-direction: row;
+    gap: 0.4vh;
+    margin-top: 1.5vh;
+    padding-left: 19.35%;
 
-  .semester-duration {
-    position: absolute;
-    left: 55%;
-    color: $landing-page-text;
-  }
+    .course-name {
+      display: flex;
+      align-items: center;
+      width: auto;
+      font-size: 19px;
+      font-weight: bolder;
+      color: $course-name;
+    }
 
-  .credit-text {
-    position: absolute; 
-    left: 70%;
-    color: $landing-page-text;
+    .semester-duration {
+      position: absolute;
+      left: 55%;
+      color: $landing-page-text;
+    }
+
+    .credit-text {
+      position: absolute;
+      left: 70%;
+      color: $landing-page-text;
+    }
   }
 }
