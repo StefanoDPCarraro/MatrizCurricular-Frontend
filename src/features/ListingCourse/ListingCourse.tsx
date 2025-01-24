@@ -16,12 +16,6 @@ const ListingCourse: React.FC = () => {
           creditCode={courses.codicred}
         />
       ))}
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
     </>
   );
 };

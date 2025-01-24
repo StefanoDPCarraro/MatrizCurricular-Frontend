@@ -1,0 +1,35 @@
+@import "@styles/index";
+
+.footer-logo-container{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: flex-start;
+
+   .footer-logo-logos{
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+     
+      img:nth-child(1) {
+         width: 6.4vw;
+      }
+
+      img:nth-child(2) {
+         width: 3.3vw;
+      }
+      
+   }
+
+   .footer-logo-text{
+      height: 10vh;
+      width: 100%;
+      margin-top: 2vh;
+      
+      p{
+         font-size: 1.3vh;
+         color: $landing-page-text;
+         margin-left: 15vh;
+      }
+   }
+}

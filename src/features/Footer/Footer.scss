@@ -4,9 +4,9 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
- }
+}
 
-.footer-container{
+.footer-container {
    display: flex;
    height: 100%;
    max-height: 19vh;
@@ -14,10 +14,23 @@
    background-color: $background;
    margin-top: 16vh;
 
-   .footer-bar{
+   .footer-bar {
       background-color: $primary;
       height: 12vh;
       width: 100%;
       flex-shrink: 0;
+      position: absolute;
+   }
+
+   .footer-components {
+      
+      .footer-logos {
+         display: flex;
+         align-items: center;
+         justify-content: flex-start;
+         gap: 1.5vh;
+         margin-top: 15vh;
+         margin-left: 25vh;
+      }
    }
 }
