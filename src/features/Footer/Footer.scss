@@ -23,13 +23,24 @@
   }
 
   .footer-components {
+    display: flex;
+    flex-direction: row;
+    
+
     .footer-logos {
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      gap: 1.5vh;
-      margin-top: 15vh;
       margin-left: 25vh;
+      margin-top: 28vh;
+    }
+
+    .footer-qr-code {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      margin-left: 150vh;
+      margin-top: 16vh;
     }
   }
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.scss";
 import FooterLogo from "@components/FooterLogo";
+import FooterQRCode from "@components/FooterQRCode";
 
 const Footer: React.FC = () => {
   return (
@@ -12,7 +13,9 @@ const Footer: React.FC = () => {
             <FooterLogo></FooterLogo>
           </div>
           <div className="footer-infos>"></div>
-          <div className="footer-qr-code"></div>
+          <div className="footer-qr-code">
+            <FooterQRCode></FooterQRCode>
+          </div>
         </div>
       </div>
     </>
