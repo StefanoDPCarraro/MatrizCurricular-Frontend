@@ -7,33 +7,27 @@ export const requirements: Requirements[] = [
   },
   {
     creditCode: "EDCBA321",
-    name: "Matematica Discreta",
-    semester: 4
+    name: "Matematica Discreta"
   },
   {
     creditCode: "XYZ98765",
-    name: "Formação do Empreendedor",
-    semester: 2
+    name: "Formação do Empreendedor"
   },
   {
     creditCode: "PRG00145",
-    name: "Estruturas de Dados",
-    semester: 5
+    name: "Estruturas de Dados"
   },
   {
     creditCode: "BD10230",
-    name: "Banco de Dados",
-    semester: 3
+    name: "Banco de Dados"
   },
   {
     creditCode: "WEB54321",
-    name: "Desenvolvimento Web",
-    semester: 7 
+    name: "Desenvolvimento Web"
   },
   {
     creditCode: "IA90012",
-    name: "Inteligência Artificial",
-    semester: 1
+    name: "Inteligência Artificial"
   }
 ];
 
