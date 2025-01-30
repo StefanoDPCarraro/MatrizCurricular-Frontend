@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest watch",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "format-and-dev": "npm run format && npm run dev"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.0",

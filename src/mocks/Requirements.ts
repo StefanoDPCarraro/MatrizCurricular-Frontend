@@ -30,4 +30,3 @@ export const requirements: Subject[] = [
     name: "Inteligência Artificial"
   }
 ];
-
