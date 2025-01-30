@@ -2,7 +2,7 @@ import React from "react";
 import Header from "@features/Header/Header";
 import "./Matriz.scss";
 import Semester from "@features/Semester/Semester";
-import { requirements } from "@mocks/Requirements";
+import { subjects } from "@mocks/Subjects";
 
 const Matriz: React.FC = () => {
   const semesters = Array.from({ length: 8 }, (_, i) => i + 1); // Cria [1, 2, 3, ..., 8]
@@ -13,7 +13,7 @@ const Matriz: React.FC = () => {
       <div className="matriz-container">
         <div className="matriz-semesters">
           {semesters.map((sem) => {
-            const filteredSubjects = requirements.filter(
+            const filteredSubjects = subjects.filter(
               (sub) => sub.semester === sem
             );
 
