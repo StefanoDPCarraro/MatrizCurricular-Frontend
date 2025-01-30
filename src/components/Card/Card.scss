@@ -3,59 +3,78 @@
 .component-card-container {
   display: flex;
   flex-direction: row;
-  height: 9.5vh;
-  width: 9.5vw;
+  height: 8vh;
+  width: 9vw;
   background-color: $light-gray;
   border: 1px solid $complementary;
-  border-radius: 1vh;
+  border-radius: 0.5vh;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between; // Garante espaçamento correto
+
   .component-card-required-container {
     display: flex;
     width: 1.5vw;
     height: 2vh;
     position: relative;
     align-self: flex-start;
+    margin-left: 0.2vh;
+    margin-top: 0.2vh;
   }
+
   .component-card-subject-credit-container {
     display: flex;
     flex-direction: column;
-    align-self: center;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 100%;
-    width: 7vw;
+    width: 60%; // Mantém o tamanho adequado
     gap: 0.5vh;
+
     .component-card-subject-container {
       display: flex;
-      height: 100%;
+      width: 100%;
+      height: 80%;
       justify-content: center;
       align-items: center;
-      justify-items: center;
       text-align: center;
       .subject-text {
-        overflow: hidden;
-        display: inline-block;
+        display: -webkit-box;
         font-size: 1.5vh;
-        align-items: center;
+        line-clamp: 3; // Define o número máximo de linhas
+        -webkit-line-clamp: 3; // Define o número máximo de linhas
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        word-break: break-word;
       }
     }
+
     .component-card-credit-container {
       display: flex;
-      height: 100%;
+      flex-shrink: 0; // Evita que esse container diminua além do esperado
+      height: 15%;
+      justify-content: center;
+      align-items: flex-end;
+
       .credit-text {
         overflow: hidden;
         display: inline-block;
         font-size: 1.5vh;
-        align-items: center;
+        white-space: normal;
+        text-overflow: ellipsis; // Evita que o texto ultrapasse o espaço
       }
     }
   }
+
+
   .component-card-requirement-container {
     display: flex;
     width: 1.5vw;
     height: 2vh;
     position: relative;
     align-self: flex-start;
+    margin-right: 0.2vh;
+    margin-top: 0.2vh;
   }
 }

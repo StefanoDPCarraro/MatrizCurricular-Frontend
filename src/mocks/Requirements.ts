@@ -23,7 +23,7 @@ export const requirements: Subject[] = [
   },
   {
     creditCode: "WEB54321",
-    name: "Desenvolvimento Web"
+    name: "Empreendedorismo Social Inovação e Responsabilidade Social"
   },
   {
     creditCode: "IA90012",
