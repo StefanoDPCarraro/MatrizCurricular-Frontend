@@ -1,12 +1,13 @@
 import { Subject } from "@dtos/SubjectDTO";
 import "./Card.scss";
 import RequisitesBanner from "@components/RequisitesBanner";
+import { Requirements } from "@dtos/RequirementsDTO";
 
 export interface CardProps {
   children?: String;
   onClick?: VoidFunction;
-  requirement: Subject[];
-  required: Subject[];
+  requirement: Requirements[];
+  required: Requirements[];
   creditCode: String;
 }
 
@@ -21,7 +22,7 @@ const Card: React.FC<CardProps> = ({
     <>
       <div className="component-card-container">
         <div className="component-card-required-container">
-          <RequisitesBanner subjects={required} variant="required">
+          <RequisitesBanner requirements={required} variant="required">
             REQ
           </RequisitesBanner>
         </div>
@@ -34,7 +35,7 @@ const Card: React.FC<CardProps> = ({
           </div>
         </div>
         <div className="component-card-requirement-container">
-          <RequisitesBanner subjects={requirement} variant="requirement">
+          <RequisitesBanner requirements={requirement} variant="requirement">
             PRE
           </RequisitesBanner>
         </div>

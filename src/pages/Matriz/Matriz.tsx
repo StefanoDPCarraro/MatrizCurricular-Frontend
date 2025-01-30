@@ -21,7 +21,9 @@ const Matriz: React.FC = () => {
             return (
               <React.Fragment key={sem}>
                 <Semester subjects={filteredSubjects} semester={sem} />
-                {sem !== numberSemesters && <div className="matriz-divisor"></div>} 
+                {sem !== numberSemesters && (
+                  <div className="matriz-divisor"></div>
+                )}
               </React.Fragment>
             );
           })}
@@ -32,4 +34,3 @@ const Matriz: React.FC = () => {
 };
 
 export default Matriz;
-

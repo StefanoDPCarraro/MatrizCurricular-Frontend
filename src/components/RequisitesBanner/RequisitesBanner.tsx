@@ -1,18 +1,19 @@
 import { Subject } from "@dtos/SubjectDTO";
 import "./RequisitesBanner.scss";
+import { Requirements } from "@dtos/RequirementsDTO";
 
 export interface RequisitesBannerProps {
-  subjects: Subject[];
+  requirements: Requirements[];
   children?: string;
   variant: "required" | "requirement";
 }
 
 const RequisitesBanner: React.FC<RequisitesBannerProps> = ({
-  subjects,
+  requirements,
   children,
   variant
 }) => {
-  if (subjects.length === 0) {
+  if (requirements.length === 0) {
     return <div className="component-requisite-container"></div>;
   } else if (variant === "required") {
     return (

@@ -17,8 +17,8 @@ const Semester: React.FC<SemesterProps> = ({ subjects, semester }) => {
         {subjects.map((sub) => (
           <Card
             creditCode={sub.creditCode}
-            required={subjects}
-            requirement={subjects}
+            required={sub.requirements}
+            requirement={sub.required}
             onClick={() => {
               console.log("clicked");
             }}
