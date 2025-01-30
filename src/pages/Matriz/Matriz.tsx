@@ -5,7 +5,8 @@ import Semester from "@features/Semester/Semester";
 import { subjects } from "@mocks/Subjects";
 
 const Matriz: React.FC = () => {
-  const semesters = Array.from({ length: 8 }, (_, i) => i + 1); // Cria [1, 2, 3, ..., 8]
+  const numberSemesters = 8;
+  const semesters = Array.from({ length: numberSemesters }, (_, i) => i + 1); // Cria [1, 2, 3, ..., 8]
 
   return (
     <>
@@ -20,7 +21,7 @@ const Matriz: React.FC = () => {
             return (
               <React.Fragment key={sem}>
                 <Semester subjects={filteredSubjects} semester={sem} />
-                <div className="matriz-divisor"></div>
+                {sem !== numberSemesters && <div className="matriz-divisor"></div>} 
               </React.Fragment>
             );
           })}
@@ -31,3 +32,4 @@ const Matriz: React.FC = () => {
 };
 
 export default Matriz;
+
