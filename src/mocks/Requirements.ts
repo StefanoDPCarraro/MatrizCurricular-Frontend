@@ -30,4 +30,3 @@ export const requirements: Requirements[] = [
     name: "Inteligência Artificial"
   }
 ];
-

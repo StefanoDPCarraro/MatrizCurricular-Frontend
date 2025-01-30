@@ -4,4 +4,12 @@
   display: flex;
   flex-direction: column;
   gap: 3vh;
+
+  .semester-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vh;
+    color: $black;
+  }
 }
