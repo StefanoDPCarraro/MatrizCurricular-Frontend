@@ -1,9 +1,9 @@
-import { Subject } from "@dtos/SubjectDTO";
+import { Requirements } from "@dtos/RequirementsDTO";
 
-export const requirements: Subject[] = [
+export const requirements: Requirements[] = [
   {
     creditCode: "ABCDE123",
-    name: "Fundamentos de Programação"
+    name: "Sistemas de Planejamento e Custos para Engenharia"
   },
   {
     creditCode: "EDCBA321",
@@ -23,10 +23,11 @@ export const requirements: Subject[] = [
   },
   {
     creditCode: "WEB54321",
-    name: "Empreendedorismo Social Inovação e Responsabilidade Social"
+    name: "Desenvolvimento Web"
   },
   {
     creditCode: "IA90012",
     name: "Inteligência Artificial"
   }
 ];
+
