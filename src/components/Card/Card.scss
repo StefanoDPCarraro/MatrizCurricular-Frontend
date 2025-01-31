@@ -9,7 +9,32 @@
   border: 1px solid $complementary;
   border-radius: 0.5vh;
   align-items: center;
-  justify-content: space-between; // Garante espaçamento correto
+  justify-content: space-between;
+  transition: opacity 0.3s, border-color 0.3s;
+
+  &:hover {
+    opacity: 1;
+    border: 2px solid;
+  }
+
+  &.related-requisite {
+    border: 3px solid;
+    border-color: $card-bright-blue !important;
+  }
+
+  &.related-prerequisite {
+    border: 3px solid;
+    border-color: $card-dark-blue !important;
+  }
+
+  &.unrelated {
+    transition: opacity 0.3s, background-color 0.3s;
+    opacity: 0.3;
+  }
+
+
+
+
 
   .component-card-required-container {
     display: flex;

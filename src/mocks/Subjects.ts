@@ -1,5 +1,4 @@
 import { Subject } from "@dtos/SubjectDTO";
-import { Requirements } from "@dtos/RequirementsDTO";
 
 export const subjects: Subject[] = [
   {
