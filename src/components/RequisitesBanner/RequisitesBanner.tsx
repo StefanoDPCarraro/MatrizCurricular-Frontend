@@ -1,4 +1,3 @@
-import { Subject } from "@dtos/SubjectDTO";
 import "./RequisitesBanner.scss";
 import { Requirements } from "@dtos/RequirementsDTO";
 

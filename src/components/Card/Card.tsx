@@ -1,7 +1,8 @@
-import { Subject } from "@dtos/SubjectDTO";
+import CardModal from "@components/CardModal/CardModal";
 import "./Card.scss";
 import RequisitesBanner from "@components/RequisitesBanner";
 import { Requirements } from "@dtos/RequirementsDTO";
+import { useState } from "react";
 
 export interface CardProps {
   children?: String;
@@ -9,6 +10,7 @@ export interface CardProps {
   requirement: Requirements[];
   required: Requirements[];
   creditCode: String;
+  semester: number;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -16,11 +18,18 @@ const Card: React.FC<CardProps> = ({
   onClick,
   requirement,
   required,
-  creditCode
+  creditCode,
+  semester
 }) => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setModalOpen(true);
+  };
+
   return (
     <>
-      <div className="component-card-container">
+      <div className="component-card-container" onClick={handleOpenModal}>
         <div className="component-card-required-container">
           <RequisitesBanner requirements={required} variant="required">
             REQ
@@ -40,6 +49,16 @@ const Card: React.FC<CardProps> = ({
           </RequisitesBanner>
         </div>
       </div>
+
+      <CardModal
+        isOpen={isModalOpen}
+        onClose={() => setModalOpen(false)}
+        name={`${children}`}
+        creditCode={`${creditCode}`}
+        semester={semester}
+        required={required}
+        requirement={requirement}
+      />
     </>
   );
 };
