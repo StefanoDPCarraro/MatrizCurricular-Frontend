@@ -1,3 +1,4 @@
+import CardModal from "@components/CardModal/CardModal";
 import { useContext, useState } from "react";
 import { MatrizContext } from "@context/MatrizContext";
 import "./Card.scss";
@@ -10,6 +11,7 @@ export interface CardProps {
   requirements: Requirements[];
   required: Requirements[];
   creditCode: string;
+  semester: number;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -18,7 +20,14 @@ const Card: React.FC<CardProps> = ({
   requirements,
   required,
   creditCode,
+  semester
 }) => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setModalOpen(true);
+  };
+
   const context = useContext(MatrizContext);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -54,6 +63,7 @@ const Card: React.FC<CardProps> = ({
   const isRequisite = required.some((req) => req.creditCode === selectedSubject?.creditCode);
 
   return (
+    <>
     <div
       className={`component-card-container 
         ${isRelated ? "related" : "unrelated"}
@@ -62,6 +72,7 @@ const Card: React.FC<CardProps> = ({
       `}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={handleOpenModal}
     >
       <div className="component-card-required-container">
         <RequisitesBanner requirements={required} variant="required">
@@ -82,6 +93,16 @@ const Card: React.FC<CardProps> = ({
         </RequisitesBanner>
       </div>
     </div>
+    <CardModal
+        isOpen={isModalOpen}
+        onClose={() => setModalOpen(false)}
+        name={`${children}`}
+        creditCode={`${creditCode}`}
+        semester={semester}
+        required={required}
+        requirement={requirements}
+      />
+    </>
   );
 };
 

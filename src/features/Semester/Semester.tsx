@@ -22,6 +22,7 @@ const Semester: React.FC<SemesterProps> = ({ subjects, semester }) => {
             onClick={() => {
               console.log("clicked");
             }}
+            semester={sub.semester}
           >
             {sub.name}
           </Card>
