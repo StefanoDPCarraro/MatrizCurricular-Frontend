@@ -41,7 +41,7 @@ const Card: React.FC<CardProps> = ({
       creditCode,
       name: children || "",
       requirements,
-      required,
+      required
     });
   };
 
@@ -59,41 +59,45 @@ const Card: React.FC<CardProps> = ({
     requirements.some((req) => req.creditCode === selectedSubject.creditCode) ||
     required.some((req) => req.creditCode === selectedSubject.creditCode);
 
-  const isPrerequisite = requirements.some((req) => req.creditCode === selectedSubject?.creditCode);
-  const isRequisite = required.some((req) => req.creditCode === selectedSubject?.creditCode);
+  const isPrerequisite = requirements.some(
+    (req) => req.creditCode === selectedSubject?.creditCode
+  );
+  const isRequisite = required.some(
+    (req) => req.creditCode === selectedSubject?.creditCode
+  );
 
   return (
     <>
-    <div
-      className={`component-card-container 
+      <div
+        className={`component-card-container 
         ${isRelated ? "related" : "unrelated"}
         ${isRequisite ? "related-requisite" : ""}
         ${isPrerequisite ? "related-prerequisite" : ""}
       `}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onClick={handleOpenModal}
-    >
-      <div className="component-card-required-container">
-        <RequisitesBanner requirements={required} variant="required">
-          REQ
-        </RequisitesBanner>
-      </div>
-      <div className="component-card-subject-credit-container">
-        <div className="component-card-subject-container">
-          <p className="subject-text">{children}</p>
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onClick={handleOpenModal}
+      >
+        <div className="component-card-required-container">
+          <RequisitesBanner requirements={required} variant="required">
+            REQ
+          </RequisitesBanner>
         </div>
-        <div className="component-card-credit-container">
-          <p className="credit-text">{creditCode}</p>
+        <div className="component-card-subject-credit-container">
+          <div className="component-card-subject-container">
+            <p className="subject-text">{children}</p>
+          </div>
+          <div className="component-card-credit-container">
+            <p className="credit-text">{creditCode}</p>
+          </div>
+        </div>
+        <div className="component-card-requirement-container">
+          <RequisitesBanner requirements={requirements} variant="requirement">
+            PRE
+          </RequisitesBanner>
         </div>
       </div>
-      <div className="component-card-requirement-container">
-        <RequisitesBanner requirements={requirements} variant="requirement">
-          PRE
-        </RequisitesBanner>
-      </div>
-    </div>
-    <CardModal
+      <CardModal
         isOpen={isModalOpen}
         onClose={() => setModalOpen(false)}
         name={`${children}`}

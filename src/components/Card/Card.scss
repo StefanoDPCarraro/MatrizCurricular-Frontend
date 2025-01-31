@@ -10,7 +10,9 @@
   border-radius: 0.5vh;
   align-items: center;
   justify-content: space-between;
-  transition: opacity 0.3s, border-color 0.3s;
+  transition:
+    opacity 0.3s,
+    border-color 0.3s;
 
   &:hover {
     opacity: 1;
@@ -28,13 +30,11 @@
   }
 
   &.unrelated {
-    transition: opacity 0.3s, background-color 0.3s;
+    transition:
+      opacity 0.3s,
+      background-color 0.3s;
     opacity: 0.3;
   }
-
-
-
-
 
   .component-card-required-container {
     display: flex;
