@@ -39,24 +39,16 @@ const Modal: React.FC<CardModalProps> = ({
         </div>
         <div className="modal-divisor"></div>
         <div className="modal-requisites">
-          {required.length > 0 && (
+          {required.some((req) => req.requirementType === "PREREQUISITE") && (
             <>
               <p className="modal-requisites-title">POSSUI REQUISITO</p>
-              {required.map((req) => (
-                <p className="modal-req-type1">
-                  {req.creditCode} - {req.name}
-                </p>
-              ))}
-            </>
-          )}
-          {requirement.length > 0 && (
-            <>
-              <p className="modal-requisites-title">É PRÉ-REQUISITO DE</p>
-              {requirement.map((req) => (
-                <p className="modal-req-type2">
-                  {req.creditCode} - {req.name}
-                </p>
-              ))}
+              {required
+                .filter((req) => req.requirementType === "PREREQUISITE")
+                .map((filtReq) => (
+                  <p className="modal-req-type1">
+                    {filtReq.creditCode} - {filtReq.name}
+                  </p>
+                ))}
             </>
           )}
           {required.some((req) => req.requirementType === "COREQUISITE") && (
@@ -65,7 +57,7 @@ const Modal: React.FC<CardModalProps> = ({
               {required
                 .filter((req) => req.requirementType === "COREQUISITE")
                 .map((filtReq) => (
-                  <p className="modal-req-type1">
+                  <p className="modal-req-type2">
                     {filtReq.creditCode} - {filtReq.name}
                   </p>
                 ))}
@@ -79,10 +71,20 @@ const Modal: React.FC<CardModalProps> = ({
               {required
                 .filter((req) => req.requirementType === "SPECIAL")
                 .map((filtReq) => (
-                  <p className="modal-req-type2">
+                  <p className="modal-req-type1">
                     {filtReq.creditCode} - {filtReq.name}
                   </p>
                 ))}
+            </>
+          )}
+          {requirement.length > 0 && (
+            <>
+              <p className="modal-requisites-title">É PRÉ-REQUISITO DE</p>
+              {requirement.map((req) => (
+                <p className="modal-req-type2">
+                  {req.creditCode} - {req.name}
+                </p>
+              ))}
             </>
           )}
         </div>
