@@ -1,5 +1,6 @@
 export interface Course {
+  curriculumCode: string;
   name: string;
-  semester: number;
-  codicred: string;
+  numberSemesters: number;
+  extracurricularHours: number;
 }
