@@ -12,6 +12,7 @@ export interface CardProps {
   required: Requirements[];
   creditCode: string;
   semester: number;
+  description: string;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -20,7 +21,8 @@ const Card: React.FC<CardProps> = ({
   requirements,
   required,
   creditCode,
-  semester
+  semester,
+  description
 }) => {
   const [isModalOpen, setModalOpen] = useState(false);
 
@@ -54,16 +56,16 @@ const Card: React.FC<CardProps> = ({
     !selectedSubject ||
     selectedSubject.creditCode === creditCode ||
     selectedSubject.name === children ||
-    selectedSubject.requirements.some((req) => req.id === creditCode) ||
-    selectedSubject.required.some((req) => req.id === creditCode) ||
-    requirements.some((req) => req.creditCode === selectedSubject.creditCode) ||
-    required.some((req) => req.creditCode === selectedSubject.creditCode);
+    selectedSubject.requirements.some((req) => req.creditCode === creditCode) ||
+    selectedSubject.required.some((req) => req.crediCode === creditCode) ||
+    requirements.some((req) => req.courseSubjectCreditCode === selectedSubject.creditCode) ||
+    required.some((req) => req.preRequirementCreditCode === selectedSubject.creditCode);
 
   const isPrerequisite = requirements.some(
-    (req) => req.creditCode === selectedSubject?.creditCode
+    (req) => req.courseSubjectCreditCode === selectedSubject?.creditCode
   );
   const isRequisite = required.some(
-    (req) => req.creditCode === selectedSubject?.creditCode
+    (req) => req.preRequirementCreditCode === selectedSubject?.creditCode
   );
 
   return (
@@ -105,6 +107,7 @@ const Card: React.FC<CardProps> = ({
         semester={semester}
         required={required}
         requirement={requirements}
+        description={description}
       />
     </>
   );

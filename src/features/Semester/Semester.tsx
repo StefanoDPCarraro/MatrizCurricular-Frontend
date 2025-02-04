@@ -18,13 +18,14 @@ const Semester: React.FC<SemesterProps> = ({ subjects, semester }) => {
           <Card
             creditCode={sub.creditCode}
             required={sub.requirements}
-            requirements={sub.required}
+            requirements={sub.prerequired}
             onClick={() => {
               console.log("clicked");
             }}
-            semester={sub.semester}
+            semester={sub.numberSemester}
+            description={sub.description}
           >
-            {sub.name}
+            {sub.subjectName}
           </Card>
         ))}
       </div>

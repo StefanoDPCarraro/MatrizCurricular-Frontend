@@ -1,5 +1,6 @@
 import React from "react";
 import "./ListingCourseCard.scss";
+import { Link } from "react-router-dom";
 
 export interface ListingCourseCard {
   courseName: String;
@@ -17,7 +18,9 @@ const ListingCourseCard: React.FC<ListingCourseCard> = ({
       <div className="component-course-container">
         <div className="divisor"></div>
         <div className="component-listing-card-container">
-          <p className="course-name"> {courseName}</p>
+          <Link to="/matriz-curricular">
+            <p className="course-name"> {courseName}</p>
+          </Link>
           <p className="semester-duration"> {semester + " semestres"}</p>
           <p className="credit-text"> {creditCode}</p>
         </div>

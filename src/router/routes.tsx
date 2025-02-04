@@ -16,4 +16,11 @@ export const routes = [
     path: PAGES.landing,
     component: <LandingPage />
   }
+
+  
 ];
+
+// export const ROUTES = {
+//   LANDING_PAGE: () => '/',
+//   MATRIZ: (id: string) => `/matriz-curricular/${id}`,
+// };

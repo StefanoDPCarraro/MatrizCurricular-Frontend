@@ -10,6 +10,7 @@ interface CardModalProps {
   semester: number;
   required: Requirements[];
   requirement: Requirements[];
+  description: string;
 }
 
 const Modal: React.FC<CardModalProps> = ({
@@ -19,7 +20,8 @@ const Modal: React.FC<CardModalProps> = ({
   creditCode,
   semester,
   required,
-  requirement
+  requirement,
+  description
 }) => {
   if (!isOpen) return null;
 
@@ -39,40 +41,40 @@ const Modal: React.FC<CardModalProps> = ({
         </div>
         <div className="modal-divisor"></div>
         <div className="modal-requisites">
-          {required.some((req) => req.requirementType === "PREREQUISITE") && (
+          {required.some((req) => req.requisiteType === "PREREQUISITE") && (
             <>
               <p className="modal-requisites-title">POSSUI REQUISITO</p>
               {required
-                .filter((req) => req.requirementType === "PREREQUISITE")
+                .filter((req) => req.requisiteType === "PREREQUISITE")
                 .map((filtReq) => (
                   <p className="modal-req-type1">
-                    {filtReq.creditCode} - {filtReq.name}
+                    {filtReq.preRequirementCreditCode} - {filtReq.preRequirementCurriculumCode}
                   </p>
                 ))}
             </>
           )}
-          {required.some((req) => req.requirementType === "COREQUISITE") && (
+          {required.some((req) => req.requisiteType === "COREQUISITE") && (
             <>
               <p className="modal-requisites-title">POSSUI CO-REQUISITO</p>
               {required
-                .filter((req) => req.requirementType === "COREQUISITE")
+                .filter((req) => req.requisiteType === "COREQUISITE")
                 .map((filtReq) => (
                   <p className="modal-req-type2">
-                    {filtReq.creditCode} - {filtReq.name}
+                    {filtReq.preRequirementCreditCode} - {filtReq.preRequirementCurriculumCode}
                   </p>
                 ))}
             </>
           )}
-          {required.some((req) => req.requirementType === "SPECIAL") && (
+          {required.some((req) => req.requisiteType === "SPECIAL") && (
             <>
               <p className="modal-requisites-title">
                 POSSUI REQUISITO ESPECIAL
               </p>
               {required
-                .filter((req) => req.requirementType === "SPECIAL")
+                .filter((req) => req.requisiteType === "SPECIAL")
                 .map((filtReq) => (
                   <p className="modal-req-type1">
-                    {filtReq.creditCode} - {filtReq.name}
+                    {filtReq.preRequirementCreditCode} - {filtReq.preRequirementCurriculumCode}
                   </p>
                 ))}
             </>
@@ -82,7 +84,7 @@ const Modal: React.FC<CardModalProps> = ({
               <p className="modal-requisites-title">É PRÉ-REQUISITO DE</p>
               {requirement.map((req) => (
                 <p className="modal-req-type2">
-                  {req.creditCode} - {req.name}
+                  {req.courseSubjectCreditCode} - {req.courseSubjectCurriculumCode}
                 </p>
               ))}
             </>
@@ -91,20 +93,7 @@ const Modal: React.FC<CardModalProps> = ({
         <div className="modal-desc">
           <p className="modal-desc-title"> Descrição</p>
           <p className="modal-desc-text">
-            {" "}
-            Estudo dos sistemas de numeração. Introdução a um sistema
-            computacional básico: entrada e saída, unidade de processamento e
-            memória. Apresentação da relação software-hardware: conceito de
-            operação com o processador, linguagem de montagem, compiladores,
-            montadores, ligadores e carregadores. Estudo de circuitos
-            combinacionais e otimização de representações Booleanas: portas
-            lógicas e formas algébricas. Exploração de problemas básicos:
-            definição de caminho crítico e tipos de conflitos em processadores
-            pipeline. Apresentação dos princípios e padrões subjacentes a
-            sistemas de entrada e saída em sistemas computacionais. Estudo de
-            conceitos relativos à hierarquia de memória, com foco no papel da
-            memória cache. Estudo de conceitos básicos de multiprocessamento.
-            Avaliação de desempenho de arquiteturas de computadores.
+            {description}
           </p>
         </div>
       </div>

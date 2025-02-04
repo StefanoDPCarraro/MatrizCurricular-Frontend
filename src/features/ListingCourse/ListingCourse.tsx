@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./ListingCourse.scss";
 import ListingHeader from "@components/ListingHeader";
 import ListingCourseCard from "@components/ListingCourseCard";
-//import { coursesTest } from "@mocks/Courses";
 import { getCourse } from "@api/axios";
 import { Course } from "@dtos/CourseDTO";
 

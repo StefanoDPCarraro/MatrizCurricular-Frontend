@@ -2,8 +2,10 @@ import { Requirements } from "./RequirementsDTO";
 
 export interface Subject {
   creditCode: string;
-  name: string;
-  semester: number;
+  subjectName: string;
+  numberSemester: number;
+  positionRequirement: number | null;
   requirements: Requirements[];
-  required: Requirements[];
+  prerequired: Requirements[];
+  description: string;
 }
