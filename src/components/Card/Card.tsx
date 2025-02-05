@@ -13,6 +13,7 @@ export interface CardProps {
   creditCode: string;
   semester: number;
   description: string;
+  positionRequirement?: number;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -22,7 +23,8 @@ const Card: React.FC<CardProps> = ({
   required,
   creditCode,
   semester,
-  description
+  description,
+  positionRequirement
 }) => {
   const [isModalOpen, setModalOpen] = useState(false);
 
@@ -112,6 +114,7 @@ const Card: React.FC<CardProps> = ({
         required={required}
         requirement={requirements}
         description={description}
+        positionRequirement={positionRequirement}
       />
     </>
   );

@@ -11,6 +11,7 @@ interface CardModalProps {
   required: Requirements[];
   requirement: Requirements[];
   description: string;
+  positionRequirement?: number;
 }
 
 const Modal: React.FC<CardModalProps> = ({
@@ -21,7 +22,9 @@ const Modal: React.FC<CardModalProps> = ({
   semester,
   required,
   requirement,
-  description
+  description,
+  positionRequirement,
+
 }) => {
   if (!isOpen) return null;
 
@@ -91,6 +94,11 @@ const Modal: React.FC<CardModalProps> = ({
                   {req.courseSubjectCurriculumCode}
                 </p>
               ))}
+            </>
+          )}
+          {positionRequirement && (
+            <>
+              <p className="modal-position-requirement"> Possui requisito de Posição ({positionRequirement} Créditos) </p>
             </>
           )}
         </div>

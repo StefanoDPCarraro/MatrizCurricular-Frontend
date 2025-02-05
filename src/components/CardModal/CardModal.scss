@@ -106,6 +106,13 @@
         border: 1px solid $card-light-blue;
         font-weight: bolder;
       }
+
+      .modal-position-requirement{
+        font-size: 1.3vh;
+        color: $black;
+        font-weight: bolder;
+        margin-top: 1vh;
+      }
     }
 
     .modal-desc {
@@ -114,7 +121,7 @@
       align-items: flex-start;
       margin-left: 2vh;
       gap: 0.2vh;
-      margin-top: 0.2vh;
+      margin-top: 0.4vh;
 
       .modal-desc-title {
         font-size: 1.5vh;

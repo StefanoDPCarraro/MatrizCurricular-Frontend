@@ -24,6 +24,7 @@ const Semester: React.FC<SemesterProps> = ({ subjects, semester }) => {
             }}
             semester={sub.numberSemester}
             description={sub.description}
+            positionRequirement={sub.positionRequirement}
           >
             {sub.subjectName}
           </Card>
