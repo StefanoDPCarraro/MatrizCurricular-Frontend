@@ -9,18 +9,12 @@ export interface RouteConfig extends Omit<RouteProps, "component"> {
 
 export const routes = [
   {
-    path: PAGES.matriz,
+    path: `${PAGES.matriz}/:courseName/:curriculumCode`,
     component: <Matriz />
   },
   {
     path: PAGES.landing,
     component: <LandingPage />
   }
-
-  
 ];
 
-// export const ROUTES = {
-//   LANDING_PAGE: () => '/',
-//   MATRIZ: (id: string) => `/matriz-curricular/${id}`,
-// };

@@ -58,8 +58,12 @@ const Card: React.FC<CardProps> = ({
     selectedSubject.name === children ||
     selectedSubject.requirements.some((req) => req.creditCode === creditCode) ||
     selectedSubject.required.some((req) => req.crediCode === creditCode) ||
-    requirements.some((req) => req.courseSubjectCreditCode === selectedSubject.creditCode) ||
-    required.some((req) => req.preRequirementCreditCode === selectedSubject.creditCode);
+    requirements.some(
+      (req) => req.courseSubjectCreditCode === selectedSubject.creditCode
+    ) ||
+    required.some(
+      (req) => req.preRequirementCreditCode === selectedSubject.creditCode
+    );
 
   const isPrerequisite = requirements.some(
     (req) => req.courseSubjectCreditCode === selectedSubject?.creditCode

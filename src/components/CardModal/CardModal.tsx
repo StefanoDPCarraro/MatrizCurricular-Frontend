@@ -48,7 +48,8 @@ const Modal: React.FC<CardModalProps> = ({
                 .filter((req) => req.requisiteType === "PREREQUISITE")
                 .map((filtReq) => (
                   <p className="modal-req-type1">
-                    {filtReq.preRequirementCreditCode} - {filtReq.preRequirementCurriculumCode}
+                    {filtReq.preRequirementCreditCode} -{" "}
+                    {filtReq.preRequirementCurriculumCode}
                   </p>
                 ))}
             </>
@@ -60,7 +61,8 @@ const Modal: React.FC<CardModalProps> = ({
                 .filter((req) => req.requisiteType === "COREQUISITE")
                 .map((filtReq) => (
                   <p className="modal-req-type2">
-                    {filtReq.preRequirementCreditCode} - {filtReq.preRequirementCurriculumCode}
+                    {filtReq.preRequirementCreditCode} -{" "}
+                    {filtReq.preRequirementCurriculumCode}
                   </p>
                 ))}
             </>
@@ -74,7 +76,8 @@ const Modal: React.FC<CardModalProps> = ({
                 .filter((req) => req.requisiteType === "SPECIAL")
                 .map((filtReq) => (
                   <p className="modal-req-type1">
-                    {filtReq.preRequirementCreditCode} - {filtReq.preRequirementCurriculumCode}
+                    {filtReq.preRequirementCreditCode} -{" "}
+                    {filtReq.preRequirementCurriculumCode}
                   </p>
                 ))}
             </>
@@ -84,7 +87,8 @@ const Modal: React.FC<CardModalProps> = ({
               <p className="modal-requisites-title">É PRÉ-REQUISITO DE</p>
               {requirement.map((req) => (
                 <p className="modal-req-type2">
-                  {req.courseSubjectCreditCode} - {req.courseSubjectCurriculumCode}
+                  {req.courseSubjectCreditCode} -{" "}
+                  {req.courseSubjectCurriculumCode}
                 </p>
               ))}
             </>
@@ -92,9 +96,7 @@ const Modal: React.FC<CardModalProps> = ({
         </div>
         <div className="modal-desc">
           <p className="modal-desc-title"> Descrição</p>
-          <p className="modal-desc-text">
-            {description}
-          </p>
+          <p className="modal-desc-text">{description}</p>
         </div>
       </div>
     </div>

@@ -1,28 +1,36 @@
 import React from "react";
 import "./ListingCourseCard.scss";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export interface ListingCourseCard {
-  courseName: String;
-  creditCode: String;
+  courseName: string;
+  curriculumCode: string;
   semester: number;
 }
 
 const ListingCourseCard: React.FC<ListingCourseCard> = ({
   courseName,
   semester,
-  creditCode
+  curriculumCode
 }) => {
+  const navigate = useNavigate();
+
+  const goToMatriz = () => {
+    navigate(`/matriz-curricular/${encodeURIComponent(courseName)}/${encodeURIComponent(curriculumCode)}`, {
+      state: { semester: semester }
+    });
+  };
+
   return (
     <>
       <div className="component-course-container">
         <div className="divisor"></div>
         <div className="component-listing-card-container">
-          <Link to="/matriz-curricular">
-            <p className="course-name"> {courseName}</p>
-          </Link>
+          <p className="course-name" onClick={goToMatriz} style={{ cursor: "pointer", textDecoration: "underline", color: "blue" }}>
+            {courseName}
+          </p>
           <p className="semester-duration"> {semester + " semestres"}</p>
-          <p className="credit-text"> {creditCode}</p>
+          <p className="credit-text"> {curriculumCode}</p>
         </div>
       </div>
     </>

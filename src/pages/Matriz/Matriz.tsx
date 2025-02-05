@@ -2,23 +2,30 @@ import React, { useEffect, useState } from "react";
 import Header from "@features/Header/Header";
 import "./Matriz.scss";
 import Semester from "@features/Semester/Semester";
-//import { subjects } from "@mocks/Subjects";
 import { MatrizProvider } from "@context/MatrizContext";
 import { getSubjectsByCurriculumCode } from "@api/axios";
 import { Subject } from "@dtos/SubjectDTO";
+import { useLocation, useParams } from "react-router-dom";
 
 const Matriz: React.FC = () => {
   const [subjects, setSubjects] = useState<Subject[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-  const numberSemesters = 8;
-  const semesters = Array.from({ length: numberSemesters }, (_, i) => i + 1); // Cria [1, 2, 3, ..., 8]
+  const {courseName, curriculumCode } = useParams<{courseName: string, curriculumCode: string }>();
+
+  const location = useLocation();
+  const semester = location.state?.semester || "Não informado";
+  const semesters = Array.from({ length: semester }, (_, i) => i + 1);
+
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await getSubjectsByCurriculumCode("98AL");
+        if (!curriculumCode) {
+          throw new Error("Curriculum code is undefined");
+        }
+        const data = await getSubjectsByCurriculumCode(curriculumCode);
         const sortedSubjects = [...(Array.isArray(data) ? data : [data])]
-        .sort((a, b) => a.subjectName.localeCompare(b.subjectName));
+          .sort((a, b) => a.subjectName.localeCompare(b.subjectName));
         setSubjects(sortedSubjects);
       } catch (error) {
         console.log(error);
@@ -31,8 +38,8 @@ const Matriz: React.FC = () => {
   }, []);
 
   if (loading) {
-    return (<> <Header course="Engenharia de Software - 98AL" />
-        < p > Carregando...</p >
+    return (<> <Header course={`${courseName} - ${curriculumCode}`} />
+      < p > Carregando...</p >
     </>)
   }
 
@@ -40,7 +47,7 @@ const Matriz: React.FC = () => {
     <MatrizProvider>
       {" "}
       {/* <-- Envolvi tudo com o Provider */}
-      <Header course="Engenharia de Software - 98AL" />
+      <Header course={`${courseName} - ${curriculumCode}`} />
       <div className="matriz-container">
         <div className="matriz-semesters">
           {semesters.map((sem) => {
@@ -51,7 +58,7 @@ const Matriz: React.FC = () => {
             return (
               <React.Fragment key={sem}>
                 <Semester subjects={filteredSubjects} semester={sem} />
-                {sem !== numberSemesters && (
+                {sem !== semester && (
                   <div className="matriz-divisor"></div>
                 )}
               </React.Fragment>

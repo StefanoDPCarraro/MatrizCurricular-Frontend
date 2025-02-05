@@ -12,8 +12,9 @@ const ListingCourse: React.FC = () => {
     const fetchData = async () => {
       try {
         const data = await getCourse();
-        const sortedCourses = [...(Array.isArray(data) ? data : [data])]
-        .sort((a, b) => a.name.localeCompare(b.name));
+        const sortedCourses = [...(Array.isArray(data) ? data : [data])].sort(
+          (a, b) => a.name.localeCompare(b.name)
+        );
         setCourse(sortedCourses);
       } catch (error) {
         console.log(error);
@@ -27,21 +28,14 @@ const ListingCourse: React.FC = () => {
     <>
       <ListingHeader></ListingHeader>
 
-      {courses && courses.map((course) => (
-        <ListingCourseCard
-          courseName={course.name}
-          semester={course.numberSemesters}
-          creditCode={course.curriculumCode}
-        />
-      ))}
-
-      {/* {coursesTest.map((course) => (
+      {courses &&
+        courses.map((course) => (
           <ListingCourseCard
             courseName={course.name}
-            semester={course.semesters}
-            creditCode={course.curriculumCode}
+            semester={course.numberSemesters}
+            curriculumCode={course.curriculumCode}
           />
-        ))} */}
+        ))}
     </>
   );
 };

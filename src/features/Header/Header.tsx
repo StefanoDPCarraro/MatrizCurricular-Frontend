@@ -1,7 +1,9 @@
 import React from "react";
 import "./Header.scss";
 import Logo from "@components/Logo";
-//import { Link } from "react-router-dom";
+import PucrsLogo from "@assets/PUCRS.png";
+import House from "@assets/House.png";
+import Arrow from "@assets/Arrow.png";
 
 export interface HeaderProps {
   course?: string;
@@ -14,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ course }) => {
         <div className="up-bar"></div>
         <div className="pucrs-logo-container">
           <Logo
-            src="src\assets\PUCRS.png"
+            src={PucrsLogo}
             alt="PUCRS Logo"
             linkTo="https://portal.pucrs.br/ensino-e-pesquisa/"
           />
@@ -22,10 +24,10 @@ const Header: React.FC<HeaderProps> = ({ course }) => {
         <div className="infos-container">
           <div className="infos-layout">
             <div className="house">
-              <Logo src="src\assets\House.png" alt="House" linkTo="/" />
+              <Logo src={House} alt="House" linkTo="/" />
             </div>
             <div className="arrow">
-              <Logo src="src\assets\Arrow.png" alt="Arrow" />
+              <Logo src={Arrow} alt="Arrow" />
             </div>
             <div className="text">
               <p>Matrizes Curriculares</p>
@@ -33,7 +35,7 @@ const Header: React.FC<HeaderProps> = ({ course }) => {
             {course && (
               <>
                 <div className="arrow">
-                  <Logo src="src/assets/Arrow.png" alt="Arrow" />
+                  <Logo src={Arrow} alt="Arrow" />
                 </div>
                 <div className="text">
                   <p>{course}</p>

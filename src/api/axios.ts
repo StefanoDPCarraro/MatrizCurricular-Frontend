@@ -12,4 +12,4 @@ export const getCourse = async () => {
 export const getSubjectsByCurriculumCode = async (curriculumCode: string) => {
   const response = await api.get(`/course-subject/${curriculumCode}`);
   return response.data;
-}
+};
