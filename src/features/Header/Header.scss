@@ -9,42 +9,56 @@
 .header-container {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  max-height: 19vh;
   width: 100%;
-
+  height: 20vh;
   background-color: $background;
 
   .up-bar {
+    display: flex;
     background-color: $primary-blue;
     height: 3vh;
     width: 100%;
-    flex-shrink: 0;
   }
 
-  .pucrs-logo-container {
+  .logos-container{
     display: flex;
-    margin-top: 2.6vh;
-    margin-left: 17.3%;
+    flex-direction: row;
+    height: 10vh;
+    width: 100%;
+    gap: 2vh;
+    align-items: center;
 
-    img {
-      width: 8vw;
-      max-width: 100%;
-      height: auto;
+    .pucrs-logo-container {
+      display: flex;
+      flex-direction: row;
+      margin-left: 17.3%;
+  
+      img {
+        width: 8vw;
+        max-width: 100%;
+        height: auto;
+      }
     }
+
+    .pet-logo-container{
+      display: flex;
+      img {
+        width: 7vw;
+        max-width: 100%;
+      }
+    }  
   }
 
   .infos-container {
     display: flex;
     flex-direction: row;
-    gap: 0.4vh;
-    margin-top: 2.4vh;
     background-color: $light-gray;
+    width: 100%;
+    height: 7vh;
 
     .infos-layout {
       display: flex;
       align-items: center;
-      height: 6.8vh;
       width: 100%;
       gap: 0.4vh;
       margin-left: 17.5%;

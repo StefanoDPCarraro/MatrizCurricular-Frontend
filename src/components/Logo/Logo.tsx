@@ -8,7 +8,6 @@ export interface LogoProps {
 }
 
 const Logo: React.FC<LogoProps> = ({ src, alt, linkTo }) => {
-
   console.log("Imagem recebida:", src);
   if (linkTo) {
     return (

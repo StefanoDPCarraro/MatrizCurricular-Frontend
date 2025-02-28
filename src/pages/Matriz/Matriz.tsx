@@ -6,16 +6,19 @@ import { MatrizProvider } from "@context/MatrizContext";
 import { getSubjectsByCurriculumCode } from "@api/axios";
 import { Subject } from "@dtos/SubjectDTO";
 import { useLocation, useParams } from "react-router-dom";
+import Loader from "@components/Loader";
 
 const Matriz: React.FC = () => {
   const [subjects, setSubjects] = useState<Subject[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-  const {courseName, curriculumCode } = useParams<{courseName: string, curriculumCode: string }>();
+  const { courseName, curriculumCode } = useParams<{
+    courseName: string;
+    curriculumCode: string;
+  }>();
 
   const location = useLocation();
   const semester = location.state?.semester || "Não informado";
   const semesters = Array.from({ length: semester }, (_, i) => i + 1);
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,8 +27,9 @@ const Matriz: React.FC = () => {
           throw new Error("Curriculum code is undefined");
         }
         const data = await getSubjectsByCurriculumCode(curriculumCode);
-        const sortedSubjects = [...(Array.isArray(data) ? data : [data])]
-          .sort((a, b) => a.subjectName.localeCompare(b.subjectName));
+        const sortedSubjects = [...(Array.isArray(data) ? data : [data])].sort(
+          (a, b) => a.subjectName.localeCompare(b.subjectName)
+        );
         setSubjects(sortedSubjects);
       } catch (error) {
         console.log(error);
@@ -38,9 +42,15 @@ const Matriz: React.FC = () => {
   }, []);
 
   if (loading) {
-    return (<> <Header course={`${courseName} - ${curriculumCode}`} />
-      < p > Carregando...</p >
-    </>)
+    return (
+      <>
+        {" "}
+        <Header course={`${courseName} - ${curriculumCode}`} />
+        <div className='matriz-loader'>
+          <Loader/ >
+        </div>
+      </>
+    );
   }
 
   return (
@@ -58,9 +68,7 @@ const Matriz: React.FC = () => {
             return (
               <React.Fragment key={sem}>
                 <Semester subjects={filteredSubjects} semester={sem} />
-                {sem !== semester && (
-                  <div className="matriz-divisor"></div>
-                )}
+                {sem !== semester && <div className="matriz-divisor"></div>}
               </React.Fragment>
             );
           })}

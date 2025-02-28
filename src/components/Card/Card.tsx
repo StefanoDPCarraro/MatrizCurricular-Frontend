@@ -88,7 +88,7 @@ const Card: React.FC<CardProps> = ({
       >
         <div className="component-card-required-container">
           <RequisitesBanner requirements={required} variant="required">
-            REQ
+            PRE
           </RequisitesBanner>
         </div>
         <div className="component-card-subject-credit-container">
@@ -101,7 +101,7 @@ const Card: React.FC<CardProps> = ({
         </div>
         <div className="component-card-requirement-container">
           <RequisitesBanner requirements={requirements} variant="requirement">
-            PRE
+            REQ
           </RequisitesBanner>
         </div>
       </div>

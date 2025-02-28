@@ -4,6 +4,7 @@ import Logo from "@components/Logo";
 import PucrsLogo from "@assets/PUCRS.png";
 import House from "@assets/House.png";
 import Arrow from "@assets/Arrow.png";
+import PET from "@assets/PET.png";
 
 export interface HeaderProps {
   course?: string;
@@ -14,12 +15,21 @@ const Header: React.FC<HeaderProps> = ({ course }) => {
     <>
       <div className="header-container">
         <div className="up-bar"></div>
+        <div className="logos-container">
         <div className="pucrs-logo-container">
           <Logo
             src={PucrsLogo}
             alt="PUCRS Logo"
             linkTo="https://portal.pucrs.br/ensino-e-pesquisa/"
           />
+        </div>
+        <div className="pet-logo-container">
+          <Logo
+            src={PET}
+            alt="PET Logo"
+            linkTo="https://petinfpucrs.github.io/"
+          />
+        </div>
         </div>
         <div className="infos-container">
           <div className="infos-layout">

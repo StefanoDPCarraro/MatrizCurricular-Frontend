@@ -16,9 +16,12 @@ const ListingCourseCard: React.FC<ListingCourseCard> = ({
   const navigate = useNavigate();
 
   const goToMatriz = () => {
-    navigate(`/matriz-curricular/${encodeURIComponent(courseName)}/${encodeURIComponent(curriculumCode)}`, {
-      state: { semester: semester }
-    });
+    navigate(
+      `/matriz-curricular/${encodeURIComponent(courseName)}/${encodeURIComponent(curriculumCode)}`,
+      {
+        state: { semester: semester }
+      }
+    );
   };
 
   return (
@@ -26,7 +29,15 @@ const ListingCourseCard: React.FC<ListingCourseCard> = ({
       <div className="component-course-container">
         <div className="divisor"></div>
         <div className="component-listing-card-container">
-          <p className="course-name" onClick={goToMatriz} style={{ cursor: "pointer", textDecoration: "underline", color: "blue" }}>
+          <p
+            className="course-name"
+            onClick={goToMatriz}
+            style={{
+              cursor: "pointer",
+              textDecoration: "underline",
+              color: "blue"
+            }}
+          >
             {courseName}
           </p>
           <p className="semester-duration"> {semester + " semestres"}</p>

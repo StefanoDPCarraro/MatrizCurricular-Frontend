@@ -23,8 +23,7 @@ const Modal: React.FC<CardModalProps> = ({
   required,
   requirement,
   description,
-  positionRequirement,
-
+  positionRequirement
 }) => {
   if (!isOpen) return null;
 
@@ -98,7 +97,12 @@ const Modal: React.FC<CardModalProps> = ({
           )}
           {positionRequirement && (
             <>
-              <p className="modal-position-requirement"> Possui requisito de Posição ({positionRequirement} Créditos) </p>
+              <p className="modal-position-requirement">
+                {" "}
+                Possui requisito de Posição ({
+                  positionRequirement
+                } Créditos){" "}
+              </p>
             </>
           )}
         </div>
