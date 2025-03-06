@@ -13,7 +13,7 @@ const RequisitesBanner: React.FC<RequisitesBannerProps> = ({
   variant
 }) => {
   if (requirements.length === 0) {
-    return <div className="component-requisite-container"></div>;
+    //return <div className="component-requisite-container"></div>;
   } else if (variant === "required") {
     return (
       <div className="component-requisite-container">
