@@ -27,7 +27,7 @@ const ListingCourse: React.FC = () => {
   return (
     <>
       <ListingHeader></ListingHeader>
-
+      
       {courses &&
         courses.map((course) => (
           <ListingCourseCard

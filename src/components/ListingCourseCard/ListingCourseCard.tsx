@@ -34,7 +34,7 @@ const ListingCourseCard: React.FC<ListingCourseCard> = ({
             onClick={goToMatriz}
             style={{
               cursor: "pointer",
-              textDecoration: "underline",
+              //textDecoration: "underline",
               color: "blue"
             }}
           >
