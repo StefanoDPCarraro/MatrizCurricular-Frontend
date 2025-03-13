@@ -45,7 +45,7 @@ const Modal: React.FC<CardModalProps> = ({
         <div className="modal-requisites">
           {required.some((req) => req.requisiteType === "PREREQUISITE") && (
             <>
-              <p className="modal-requisites-title">POSSUI REQUISITO</p>
+              <p className="modal-requisites-title">POSSUI PRÉ-REQUISITO</p>
               {required
                 .filter((req) => req.requisiteType === "PREREQUISITE")
                 .map((filtReq) => (
@@ -86,7 +86,7 @@ const Modal: React.FC<CardModalProps> = ({
           )}
           {requirement.length > 0 && (
             <>
-              <p className="modal-requisites-title">É PRÉ-REQUISITO DE</p>
+              <p className="modal-requisites-title">LIBERA</p>
               {requirement.map((req) => (
                 <p className="modal-req-type2">
                   {req.courseSubjectCreditCode} -{" "}

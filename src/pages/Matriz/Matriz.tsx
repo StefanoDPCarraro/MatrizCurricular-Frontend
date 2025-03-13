@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Header from "@features/Header/Header";
 import "./Matriz.scss";
-import Semester from "@features/Semester/Semester";
 import { MatrizProvider } from "@context/MatrizContext";
 import { getSubjectsByCurriculumCode } from "@api/axios";
 import { Subject } from "@dtos/SubjectDTO";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Loader from "@components/Loader";
+import Semester from "@features/Semester/Semester";
 
 const Matriz: React.FC = () => {
   const [subjects, setSubjects] = useState<Subject[]>([]);
@@ -16,15 +16,11 @@ const Matriz: React.FC = () => {
     curriculumCode: string;
   }>();
 
-  const location = useLocation();
-  const semester = location.state?.semester || "Não informado";
-  const semesters = Array.from({ length: semester }, (_, i) => i + 1);
-
   useEffect(() => {
     const fetchData = async () => {
       try {
         if (!curriculumCode) {
-          throw new Error("Curriculum code is undefined");
+          throw new Error("Código da matriz não definido");
         }
         const data = await getSubjectsByCurriculumCode(curriculumCode);
         const sortedSubjects = [...(Array.isArray(data) ? data : [data])].sort(
@@ -44,35 +40,47 @@ const Matriz: React.FC = () => {
   if (loading) {
     return (
       <>
-        {" "}
         <Header course={`${courseName} - ${curriculumCode}`} />
-        <div className='matriz-loader'>
-          <Loader/ >
+        <div className="matriz-loader">
+          <Loader />
         </div>
       </>
     );
   }
 
+  // Pegando os semestres distintos ordenados
+  const semesters = Array.from(
+    new Set(subjects.map((sub) => sub.numberSemester))
+  ).sort((a, b) => a - b);
+
   return (
     <MatrizProvider>
-      {" "}
-      {/* <-- Envolvi tudo com o Provider */}
       <Header course={`${courseName} - ${curriculumCode}`} />
       <div className="matriz-container">
-        <div className="matriz-semesters">
-          {semesters.map((sem) => {
-            const filteredSubjects = subjects.filter(
-              (sub) => sub.numberSemester === sem
-            );
+        <table className="matriz-table">
+          <thead>
+            <tr>
+              {semesters.map((sem) => (
+                <th key={sem}>Semestre {sem}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              {semesters.map((sem) => {
+                const filteredSubjects = subjects.filter(
+                  (sub) => sub.numberSemester === sem
+                );
 
-            return (
-              <React.Fragment key={sem}>
-                <Semester subjects={filteredSubjects} semester={sem} />
-                {sem !== semester && <div className="matriz-divisor"></div>}
-              </React.Fragment>
-            );
-          })}
-        </div>
+                return (
+                  <td key={sem}>
+                    <Semester subjects={filteredSubjects} />
+                  </td>
+                );
+              })}
+            </tr>
+          </tbody>
+        </table>
       </div>
     </MatrizProvider>
   );

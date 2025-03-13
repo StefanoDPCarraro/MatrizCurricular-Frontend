@@ -1,6 +1,6 @@
 @import "@styles/index";
 
-.matriz-loader{
+.matriz-loader {
   display: flex;
   width: 100%;
   height: 100%;
@@ -10,22 +10,45 @@
 
 .matriz-container {
   display: flex;
-  flex-direction: row;
-  gap: 3vw;
-  margin-left: 7.2vh;
+  justify-content: center;
   margin-top: 3vh;
+  overflow-x: auto; // Permite rolagem horizontal caso a tabela seja muito grande
 
-  .matriz-semesters {
-    display: flex;
-    flex-direction: row;
-    gap: 3vh;
+  .matriz-table {
+    width: 95%;
+    max-height: 100%;
+    border-collapse: collapse;
+    background-color: $background;
+    overflow: hidden;
 
-    .matriz-divisor {
-      display: flex;
-      flex-direction: row;
-      background-color: $complementary-gray;
-      height: 100%;
-      width: 2px;
+    thead {
+      background-color: $background;
+      color: $black;
+      text-align: center;
+
+      th {
+        height: 5vh;
+        font-size: 1.2rem;
+        //border: 1px solid $complementary-gray;
+      }
+    }
+
+    tbody {
+      text-align: center;
+
+      td {
+        padding: 20px;
+        border: 1px solid $complementary-gray;
+        min-width: 200px; // Aumenta o espaço para os cards dentro da célula
+        vertical-align: top;
+
+        .semester-container {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5vh;
+          align-items: center;
+        }
+      }
     }
   }
 }

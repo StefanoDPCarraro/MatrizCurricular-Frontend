@@ -6,14 +6,12 @@ import { Subject } from "@dtos/SubjectDTO";
 
 export interface SemesterProps {
   subjects: Subject[];
-  semester: number;
 }
 
-const Semester: React.FC<SemesterProps> = ({ subjects, semester }) => {
+const Semester: React.FC<SemesterProps> = ({ subjects}) => {
   return (
     <>
       <div className="semester-container">
-        <p className="semester-title">Semestre {semester}</p>
         {subjects.map((sub) => (
           <Card
             creditCode={sub.creditCode}

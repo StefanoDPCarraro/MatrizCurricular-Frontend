@@ -101,7 +101,7 @@ const Card: React.FC<CardProps> = ({
         </div>
         <div className="component-card-requirement-container">
           <RequisitesBanner requirements={requirements} variant="requirement">
-            REQ
+            LIB
           </RequisitesBanner>
         </div>
       </div>
