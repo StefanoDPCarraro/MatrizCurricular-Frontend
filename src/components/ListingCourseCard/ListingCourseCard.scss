@@ -4,8 +4,8 @@
   .divisor {
     background-color: $complementary-gray;
     height: 1px;
-    width: 64%;
-    margin-top: 1.5vh;
+    width: 1228.8px; /* 64% de 1920px */
+    margin-top: 16.2px; /* 1.5vh */
     margin-left: auto;
     margin-right: auto;
   }
@@ -13,9 +13,9 @@
   .component-listing-card-container {
     display: flex;
     flex-direction: row;
-    gap: 0.4vh;
-    margin-top: 1.5vh;
-    padding-left: 19.35%;
+    gap: 4.32px; /* 0.4vh */
+    margin-top: 16.2px; /* 1.5vh */
+    padding-left: 371.52px; /* 19.35% de 1920px */
 
     .course-name {
       display: flex;
@@ -28,14 +28,36 @@
 
     .semester-duration {
       position: absolute;
-      left: 55%;
+      left: 1056px; /* 55% de 1920px */
       color: $complementary;
     }
 
     .credit-text {
       position: absolute;
-      left: 70%;
+      left: 1344px; /* 70% de 1920px */
       color: $complementary;
     }
+  }
+}
+
+/* Media query para garantir que os tamanhos fixos sejam aplicados corretamente */
+@media (max-width: 1920px), (max-height: 1080px) {
+  .divisor {
+    width: 1228.8px;
+    margin-top: 16.2px;
+  }
+
+  .component-listing-card-container {
+    gap: 4.32px;
+    margin-top: 16.2px;
+    padding-left: 371.52px;
+  }
+
+  .semester-duration {
+    left: 1056px;
+  }
+
+  .credit-text {
+    left: 1344px;
   }
 }

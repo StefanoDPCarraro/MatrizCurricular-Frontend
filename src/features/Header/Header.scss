@@ -10,40 +10,42 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 20vh;
+  max-width: none;
+  height: 216px; /* 20vh */
   background-color: $background;
 
   .up-bar {
     display: flex;
     background-color: $primary-blue;
-    height: 3vh;
-    width: 100%;
+    height: 32.4px; /* 3vh */
   }
 
-  .logos-container{
+  .logos-container {
     display: flex;
     flex-direction: row;
-    height: 10vh;
+    height: 108px; /* 10vh */
     width: 100%;
-    gap: 2vh;
+    gap: 21.6px; /* 2vh */
     align-items: center;
+    justify-content: flex-start; /* Faz as logos começarem da esquerda */
+
 
     .pucrs-logo-container {
       display: flex;
       flex-direction: row;
-      margin-left: 17.3%;
-  
+
       img {
-        width: 8vw;
+        width: 153.6px; /* 8vw */
         max-width: 100%;
         height: auto;
       }
     }
 
-    .pet-logo-container{
+    .pet-logo-container {
       display: flex;
+      
       img {
-        width: 7vw;
+        width: 134.4px; /* 7vw */
         max-width: 100%;
       }
     }  
@@ -54,21 +56,21 @@
     flex-direction: row;
     background-color: $light-gray;
     width: 100%;
-    height: 7vh;
+    height: 75.6px; /* 7vh */
 
     .infos-layout {
       display: flex;
       align-items: center;
       width: 100%;
-      gap: 0.4vh;
-      margin-left: 17.5%;
+      gap: 4.32px; /* 0.4vh */
+      margin-left: 336px; /* 17.5% de 1920px */
 
       .house {
         display: flex;
         align-items: center;
 
         img {
-          width: 2vw;
+          width: 38.4px; /* 2vw */
           max-width: 100%;
           height: auto;
         }
@@ -80,7 +82,7 @@
         width: auto;
 
         img {
-          width: 1vw;
+          width: 19.2px; /* 1vw */
           max-width: 100%;
           height: auto;
         }
@@ -92,10 +94,59 @@
         width: auto;
 
         p {
-          font-size: 1.5vh;
+          font-size: 16.2px; /* 1.5vh */
           color: #666666;
         }
       }
     }
+  }
+}
+
+/* Media query para outras resoluções */
+@media (max-width: 1920px), (max-height: 1080px) {
+  .header-container {
+    height: 216px;
+  }
+
+  .up-bar {
+    height: 32.4px;
+  }
+
+  .logos-container {
+    height: 108px;
+    gap: 21.6px;
+  }
+
+  .pucrs-logo-container {
+    margin-left: 332.16px;
+  }
+
+  .pucrs-logo-container img {
+    width: 153.6px;
+  }
+
+  .pet-logo-container img {
+    width: 134.4px;
+  }
+
+  .infos-container {
+    height: 75.6px;
+  }
+
+  .infos-layout {
+    gap: 4.32px;
+    margin-left: 336px;
+  }
+
+  .house img {
+    width: 38.4px;
+  }
+
+  .arrow img {
+    width: 19.2px;
+  }
+
+  .text p {
+    font-size: 16.2px;
   }
 }

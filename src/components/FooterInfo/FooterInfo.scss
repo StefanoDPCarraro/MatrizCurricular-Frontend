@@ -9,67 +9,101 @@
 .footer-info-container {
   display: flex;
   flex-direction: column;
-  margin-top: 18vh;
+  margin-top: 194.4px; /* 18vh */
+}
 
-  .menu-footer {
-    font-size: 1.6vh;
-    color: $primary-blue;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin-left: 14.8vh;
-    margin-bottom: 4vh;
-    gap: 1.5vh;
+.menu-footer {
+  font-size: 17.28px; /* 1.6vh */
+  color: $primary-blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 159.84px; /* 14.8vh */
+  margin-bottom: 43.2px; /* 4vh */
+  gap: 16.2px; /* 1.5vh */
+}
 
-    a {
-      text-decoration: none; // Remove o sublinhado
-      color: inherit; // Mantém a cor definida no container
-    }
+.menu-footer a {
+  text-decoration: none; /* Remove o sublinhado */
+  color: inherit; /* Mantém a cor definida no container */
+}
+
+.menu-privacy {
+  font-size: 15.12px; /* 1.4vh */
+  color: $landing-page-text;
+  display: flex;
+  flex-direction: row;
+  margin-left: 159.84px; /* 14.8vh */
+  margin-bottom: 32.4px; /* 3vh */
+  gap: 15.12px; /* 1.4vh */
+}
+
+.menu-privacy a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.divisor {
+  background-color: $complementary-gray;
+  height: 1px;
+  width: 691.2px; /* 64vh */
+  margin-left: 159.84px; /* 14.8vh */
+  margin-bottom: 51.84px; /* 4.8vh */
+}
+
+.menu-social-media {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25.92px; /* 2.4vh */
+  margin-bottom: 75.6px; /* 7vh */
+  margin-left: 159.84px; /* 14.8vh */
+}
+
+.menu-social-media a {
+  display: inline-block;
+  width: 30.24px; /* 2.8vh */
+  height: auto;
+}
+
+.menu-social-media img {
+  width: 100%;
+  height: auto;
+}
+
+/* Media query para manter consistência em outras resoluções */
+@media (max-width: 1920px), (max-height: 1080px) {
+  .footer-info-container {
+    margin-top: 194.4px;
   }
 
-  .divisor {
+  .menu-footer {
+    font-size: 17.28px;
+    margin-left: 159.84px;
+    margin-bottom: 43.2px;
+    gap: 16.2px;
   }
 
   .menu-privacy {
-    font-size: 1.4vh;
-    color: $landing-page-text;
-    display: flex;
-    flex-direction: row;
-    margin-left: 14.8vh;
-    margin-bottom: 3vh;
-    gap: 1.4vh;
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+    font-size: 15.12px;
+    margin-left: 159.84px;
+    margin-bottom: 32.4px;
+    gap: 15.12px;
   }
 
   .divisor {
-    background-color: $complementary-gray;
-    height: 1px;
-    width: 64vh;
-    margin-left: 14.8vh;
-    margin-bottom: 4.8vh;
+    width: 691.2px;
+    margin-left: 159.84px;
+    margin-bottom: 51.84px;
   }
 
   .menu-social-media {
-    display: flex;
-    justify-content: center-start;
-    align-items: center;
-    gap: 2.4vh;
-    margin-bottom: 7vh;
-    margin-left: 14.8vh;
+    gap: 25.92px;
+    margin-bottom: 75.6px;
+    margin-left: 159.84px;
+  }
 
-    a {
-      display: inline-block;
-      width: 2.8vh;
-      height: auto;
-    }
-
-    img {
-      width: 100%;
-      height: auto;
-    }
+  .menu-social-media a {
+    width: 30.24px;
   }
 }
