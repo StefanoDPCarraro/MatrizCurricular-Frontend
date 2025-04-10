@@ -8,51 +8,59 @@
 
 .footer-container {
   display: flex;
-  height: 100%;
-  max-height: 129.6px; /* 12vh */
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  margin-top: 172.8px; /* 16vh */
+  max-height: 129.6px; /* 12vh */
+  margin-top: 172.8px;  /* 16vh */
 }
 
 .footer-bar {
-  direction: flex;
+  display: flex;
   flex-direction: row;
-  
-  background-color: $primary;
-  height: 129.6px; /* 12vh */
+  justify-content: center;
+  align-items: center;
+  background-color: $primary; /* substitua pelo valor real de $primary se necessário */
+  height: 129.6px;
   width: 100%;
   flex-shrink: 0;
-  position: absolute;
 }
 
 .footer-components {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 120px; /* padding lateral para afastar os itens */
+  box-sizing: border-box;
 }
 
 .footer-logos {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-left: 270px; /* 25vh */
-  margin-top: 302.4px; /* 28vh */
+  width: 300px;
+  margin-left: 0;
 }
 
 .footer-info {
-  margin-top: 1080px; /* 100vh */
-  height: 108px; /* 10vh */
-  margin-bottom: -216px; /* -20vh */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 108px;
+  width: 100%;
 }
 
 .footer-qr-code {
   display: flex;
   align-items: center;
-  position: absolute;
-  margin-left: 1620px; /* 150vh */
-  margin-top: 172.8px; /* 16vh */
+  justify-content: flex-end;
+  width: 300px;
+  margin-right: 0;
 }
 
-/* Media query para manter a responsividade */
+/* Responsividade mantendo em px */
 @media (max-width: 1920px), (max-height: 1080px) {
   .footer-container {
     max-height: 129.6px;
@@ -63,19 +71,19 @@
     height: 129.6px;
   }
 
+  .footer-components {
+    padding: 0 120px;
+  }
+
   .footer-logos {
-    margin-left: 270px;
-    margin-top: 302.4px;
+    width: 300px;
   }
 
   .footer-info {
-    margin-top: 1080px;
     height: 108px;
-    margin-bottom: -216px;
   }
 
   .footer-qr-code {
-    margin-left: 1620px;
-    margin-top: 172.8px;
+    width: 300px;
   }
 }
