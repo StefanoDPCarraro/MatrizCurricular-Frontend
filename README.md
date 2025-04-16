@@ -15,8 +15,8 @@ Este é um projeto frontend moderno utilizando [Vite](https://vitejs.dev/) para 
 1. **Clone o repositório**
 
 ```bash
-git clone https://github.com/seu-usuario/nome-do-repo.git
-cd nome-do-repo
+git clone https://github.com/StefanoDPCarraro/MartizCurricular-Frontend.git
+cd MartizCurricular-Frontend
 ```
 
 Instale as dependências
