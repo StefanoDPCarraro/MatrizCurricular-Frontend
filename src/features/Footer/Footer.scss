@@ -17,7 +17,6 @@
 
 .footer-bar {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: $primary; /* substitua pelo valor real de $primary se necessário */
@@ -29,18 +28,16 @@
 .footer-components {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0 120px; /* padding lateral para afastar os itens */
-  box-sizing: border-box;
+  padding: 20px; /* padding lateral para afastar os itens */
 }
 
 .footer-logos {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 300px;
+  width: 20%;
   margin-left: 0;
 }
 
@@ -57,7 +54,7 @@
   align-items: center;
   justify-content: flex-end;
   width: 300px;
-  margin-right: 0;
+  margin-right: 10px;
 }
 
 /* Responsividade mantendo em px */
@@ -72,7 +69,7 @@
   }
 
   .footer-components {
-    padding: 0 120px;
+    padding: 0 220px;
   }
 
   .footer-logos {
@@ -84,6 +81,6 @@
   }
 
   .footer-qr-code {
-    width: 300px;
+    width: 150px;
   }
 }

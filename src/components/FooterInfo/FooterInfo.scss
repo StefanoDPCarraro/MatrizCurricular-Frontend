@@ -9,7 +9,6 @@
 .footer-info-container {
   display: flex;
   flex-direction: column;
-  margin-top: 194.4px; /* 18vh */
 }
 
 .menu-footer {
@@ -74,7 +73,7 @@
 /* Media query para manter consistência em outras resoluções */
 @media (max-width: 1920px), (max-height: 1080px) {
   .footer-info-container {
-    margin-top: 194.4px;
+    margin-top: 50px;
   }
 
   .menu-footer {

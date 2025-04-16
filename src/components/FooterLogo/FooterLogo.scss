@@ -5,9 +5,11 @@
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
+  margin-top: -60px;
 }
 
 .footer-logo-logos {
+  margin-left: -100px;
   display: flex;
   flex-direction: row;
 }
@@ -37,28 +39,30 @@
 }
 
 .footer-logo-text p {
-  font-size: 14.04px; /* 1.3vh */
+  font-size: 12.04px; /* 1.3vh */
   color: $landing-page-text;
-  margin-left: 162px; /* 15vh */
+  
 }
 
 /* Media query para outras resoluções */
 @media (max-width: 1920px), (max-height: 1080px) {
   .footer-marista-logo img {
-    width: 122.88px;
+    width: 112.88px;
   }
 
   .footer-pucrs-logo img {
-    width: 65.28px;
+    width: 55.28px;
   }
 
   .footer-logo-text {
     height: 108px;
-    margin-top: 21.6px;
+    margin-top: 11.6px;
+    margin-left: 80px;
   }
 
   .footer-logo-text p {
-    font-size: 14.04px;
-    margin-left: 162px;
+    font-size: 12.04px;
+    
+    
   }
 }

@@ -5,7 +5,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10.8px; /* 1vh */
+  margin-top: -70px;
+  
 }
 
 .footer-qrcode-container img {
@@ -15,7 +16,7 @@
 /* Media query para outras resoluções */
 @media (max-width: 1920px), (max-height: 1080px) {
   .footer-qrcode-container {
-    gap: 10.8px;
+    
   }
 
   .footer-qrcode-container img {
