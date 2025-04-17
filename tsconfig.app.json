@@ -29,6 +29,7 @@
       "@api/*": ["api/*"],
       "@assets/*": ["assets/*"],
       "@components/*": ["components/*"],
+      "@context/*": ["context/*"],
       "@config/*": ["config/*"],
       "@constants/*": ["constants/*"],
       "@dtos/*": ["dtos/*"],

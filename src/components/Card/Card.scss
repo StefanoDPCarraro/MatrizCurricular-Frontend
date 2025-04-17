@@ -1,26 +1,107 @@
-@import '@styles/index';
+@import "@styles/index";
 
-.component-card-container{
+.component-card-container {
+  display: flex;
+  height: 8vh;
+  width: 9vw;
+  background-color: $light-gray;
+  border: 1px solid $complementary;
+  border-radius: 0.5vh;
+  align-items: center;
+  justify-content: space-between;
+  transition:
+    opacity 0.3s,
+    border-color 0.3s;
+
+  &:hover {
+    opacity: 1;
+    border: 2px solid;
+    cursor: pointer;
+  }
+
+  &.related-requisite {
+    border: 3px solid;
+    border-color: $card-bright-blue !important;
+  }
+
+  &.related-prerequisite {
+    border: 3px solid;
+    border-color: $card-dark-blue !important;
+  }
+
+  &.unrelated {
+    transition:
+      opacity 0.3s,
+      background-color 0.3s;
+    opacity: 0.3;
+  }
+
+  .component-card-required-container {
     display: flex;
-    height: 10vh;
-    width: 10vw;
-    background-color: $background;
-    border: 1px solid $complementary;
-    border-radius: 10px;
+    width: 1.5vw;
+    height: 3vh;
+    position: relative;
+    align-self: flex-start;
+    margin-left: 0.2vh;
+    margin-top: 0.2vh;
+  }
+
+  .component-card-requirement-container {
+    display: flex;
+    width: 1.5vw;
+    height: 3vh;
+    position: relative;
+    align-self: flex-start;
+    margin-right: 0.2vh;
+    margin-top: 0.2vh;
+  }
+
+  .component-card-subject-credit-container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    .component-card-required-container{
-        align-self: start;
-        position: relative;
-        .required-label{
-            font-size: small;
-        }
+    justify-content: space-between;
+    height: 100%;
+    width: 60%; // Mantém o tamanho adequado
+    gap: 0.5vh;
+
+    .component-card-subject-container {
+      display: flex;
+      width: 100%;
+      height: 80%;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      .subject-text {
+        display: -webkit-box;
+        font-size: 1.5vh;
+        line-clamp: 3; // Define o número máximo de linhas
+        -webkit-line-clamp: 3; // Define o número máximo de linhas
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        word-break: break-word;
+      }
     }
-    .component-card-requirement-container{
-        align-self: start;
-        position: relative;
-        .requirement-label{
-            font-size: small;
-        }
+
+    .component-card-credit-container {
+      display: flex;
+      flex-shrink: 0; // Evita que esse container diminua além do esperado
+      height: 15%;
+      justify-content: center;
+      align-items: flex-end;
+
+      .credit-text {
+        overflow: hidden;
+        display: inline-block;
+        font-size: 1.5vh;
+        white-space: normal;
+        text-overflow: ellipsis; // Evita que o texto ultrapasse o espaço
+      }
     }
+  }
+
+  
 }

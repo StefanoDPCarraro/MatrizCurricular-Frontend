@@ -1,16 +1,55 @@
-@import '@styles/index';
+@import "@styles/index";
 
-.component-requisite-container{
-    width: 2vw;
-    height: 1vh;
-    .component-requisite-banner{
-        background-color: $primary;
-        height: 100%;
-        width: 100%;
-        align-self: flex-end;
-        font-size: small;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+.component-requisite-container {
+  .component-requisite-banner {
+    display: flex;
+    border-radius: 0.5vh;
+    background-color: $card-blue;
+    height: 2vh;
+    width: 1.5vw;
+    align-items: center;
+    justify-content: center;
 
+    .requisite-text {
+      display: flex;
+      height: 80%;
+      width: 80%;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: $card-white;
+      font-size: 1.3vh;
+      font-weight: bold;
+    }
+  }
+}
 
+.component-requirement-container {
+  .component-requirement-banner {
+    display: flex;
+    border-radius: 0.5vh;
+    background-color: $card-light-blue;
+    height: 2vh;
+    width: 1.5vw;
+    align-items: center;
+    justify-content: center;
+
+    .requirement-text {
+      display: flex;
+      height: 80%;
+      width: 80%;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: $card-blue;
+      font-size: 80%;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import "@styles/index";
+
+.matriz-loader {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.matriz-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3vh;
+  overflow-x: auto; // Permite rolagem horizontal caso a tabela seja muito grande
+
+  .matriz-table {
+    width: 95%;
+    max-height: 100%;
+    border-collapse: collapse;
+    background-color: $background;
+    overflow: hidden;
+
+    thead {
+      background-color: $background;
+      color: $black;
+      text-align: center;
+
+      th {
+        height: 5vh;
+        font-size: 1.2rem;
+        //border: 1px solid $complementary-gray;
+      }
+    }
+
+    tbody {
+      text-align: center;
+
+      td {
+        padding: 20px;
+        border: 1px solid $complementary-gray;
+        min-width: 200px; // Aumenta o espaço para os cards dentro da célula
+        vertical-align: top;
+
+        .semester-container {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5vh;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 const PAGES = {
-  landing: '/',
-  matriz: '/matriz'
+  landing: "/",
+  matriz: "/matriz-curricular"
 };
 
 export default PAGES;
